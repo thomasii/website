@@ -1,24 +1,47 @@
-// load XML file
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    var xml = xhr.responseXML;
-    var options = xml.getElementsByTagName("option");
+let selectBox = document.getElementById("Dropdown");
 
-    // add options to dropdown
-    var dropdown = document.getElementById("Dropdown");
-    for (var i = 0; i < options.length; i++) {
-      var text = options[i].childNodes[0].nodeValue;
-      var url = options[i].getAttribute("url");
-      dropdown.innerHTML += "<option value='" + url + "'>" + text + "</option>";
+// Load the XML file using a relative URL
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "options.xml", true);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    let xmlDoc = xhr.responseXML;
+    let countries = xmlDoc.getElementsByTagName("country");
+
+    // Populate the select box with the country names
+    for (let i = 0; i < countries.length; i++) {
+      let option = document.createElement("option");
+      option.text = countries[i].getElementsByTagName("name")[0].textContent;
+      option.value = countries[i].getElementsByTagName("code")[0].textContent;
+      selectBox.add(option);
     }
   }
 };
-xhr.open("GET", "options.xml", true);
 xhr.send();
 
-// redirect to selected option's URL
+function search() {
+  // Declare variables
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('userInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("Dropdown");
+  li = ul.getElementsByTagName('option');
+
+  // Loop through all option elements, hide those that don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
 function redirect() {
-  var url = document.getElementById("Dropdown").value;
-  window.location.href = url;
+  let selectedOption = document.getElementById("Dropdown").value;
+  if (selectedOption !== "") {
+    window.location.href = "https://en.wikipedia.org/wiki/" + selectedOption;
+  }
 }
