@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options>
+  <option>
+    <text>China</text>
+    <url>https://en.wikipedia.org/wiki/China</url>
+  </option>
+  <option>
+    <text>Japan</text>
+    <url>https://en.wikipedia.org/wiki/Japan</url>
+  </option>
+  <option>
+    <text>India</text>
+    <url>https://en.wikipedia.org/wiki/India</url>
+  </option>
+</options>
