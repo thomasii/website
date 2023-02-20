@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>test page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="2x2"></div>
+    <br />
+    <br />
+    <div id="tabs"></div>
+    <br />
+    <br />
+    <div id="navigator"></div>
+    <br />
+    <br />
+    <div id="search"></div>
+    <script>
+      $("#2x2").load("2x2/index.html");
+      $.getScript('2x2/script.js', function() {
+      });
+
+      $("#tabs").load("tabs/index.html");
+      $.getScript('tabs/script.js', function() {
+      });
+
+      $("#navigator").load("navigator/index.html");
+      $.getScript('navigator/script.js', function() {
+      });
+
+      $("#search").load("search/index.html");
+      $.getScript('search/script.js', function() {
+      });
+
+    </script>
+  </body>
+</html>
