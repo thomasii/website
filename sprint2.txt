@@ -1,0 +1,17 @@
+Sprint 2 Bootstrap Design:
+Task 1: Create a new blank HTML page with Bootstrap containers, and add existing elements to the new page. Adjust styles and conduct a peer review of the container and widget layout. Establish if new widgets need to be made, and also consider the color theme of the elements with regard to porting this page over onto the server at the Onboarding page. Use a CSS validator tool like W3C CSS Validator, a responsive design testing tool like Responsinator, and a browser inspector tool like Chrome DevTools. (1.25 days)
+
+Subtask 1.1: Set up a blank HTML page with Bootstrap containers and ensure all necessary dependencies are included. (0.25 day)
+Subtask 1.2: Add existing elements to the new page and adjust styles as necessary. Use the CSS validator tool to ensure valid syntax and check for any errors. (0.5 day)
+Subtask 1.3: Conduct a peer review of the container and widget layout, and establish if new widgets need to be made. Consider the color theme of the elements with regard to porting this page over onto the server at the Onboarding page. (0.5 day)
+Task 2: Refine the layout and styling of the page based on peer review feedback. Test the page on various devices and screen sizes using Responsinator and adjust any styling as necessary. (2.5 days)
+
+Subtask 2.1: Implement changes from the peer review and continue refining the layout and styling of the page. (1.5 days)
+Subtask 2.2: Test the page on various devices and screen sizes using Responsinator and adjust any styling as necessary. (1 day)
+Task 3: Add accessibility features to the page, such as alternative text for images and proper semantic HTML markup, and validate using a tool like WAVE. (1 day)
+
+Subtask 3.1: Add alternative text for all images and ensure proper semantic HTML markup. (0.5 day)
+Subtask 3.2: Validate the page using a tool like WAVE to ensure accessibility requirements are met. (0.5 day)
+Task 4: Final review and testing, ensuring that the page meets all design and accessibility requirements. (0.5 day)
+
+Task 5: Deployment and integration of the new page into the Xetron Onboarding page on the server. (0.5 day)
