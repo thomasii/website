@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>test page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+
+    <script>
+
+      
+      $.getScript('../2x2/script.js', function() {
+        $.get('../2x2/style.css', function(css) {
+          $('head').append('<style>' + css + '</style>');
+        });
+      });
+
+      
+      $.getScript('../tabs/script.js', function() {
+        $.get('../tabs/style.css', function(css) {
+          $('head').append('<style>' + css + '</style>');
+        });
+      });
+
+      
+      $.getScript('../navigator/script.js', function() {
+        $.get('../navigator/style.css', function(css) {
+          $('head').append('<style>' + css + '</style>');
+        });
+      });
+
+      
+      $.getScript('../search/script.js', function() {
+        $.get('../search/style.css', function(css) {
+          $('head').append('<style>' + css + '</style>');
+      });
+    });
+    
+    </script>
+
+
+  </head>
+  <body>
+    <div id="2x2"></div>
+    <br />
+    <br />
+    <div id="tabs"></div>
+    <br />
+    <br />
+    <div id="navigator"></div>
+    <br />
+    <br />
+    <div id="search"></div>
+  </body>
+
+  <script>
+
+  $("#2x2").load("../2x2/index.html");
+  $("#tabs").load("../tabs/index.html");
+  $("#navigator").load("../navigator/index.html");
+  $("#search").load("../search/index.html");
+  </script>
+</html>
