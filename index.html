@@ -1,42 +1,99 @@
 <html>
   <head>
     <title>test page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+
   </head>
   <body>
-    <div id="2x2"></div>
-    <br />
-    <br />
-    <div id="tabs"></div>
-    <br />
-    <br />
-    <div id="navigator"></div>
-    <br />
-    <br />
-    <div id="search"></div>
-    <script>
-      $("#2x2").load("2x2/index.html");
-      $.getScript('2x2/script.js', function() {
-      });
-
-      $("#tabs").load("tabs/index.html");
-      $.getScript('tabs/script.js', function() {
-      });
-
-      $("#navigator").load("navigator/index.html");
-      $.getScript('navigator/script.js', function() {
-      });
-
-      $("#search").load("search/index.html");
-      $.getScript('search/script.js', function() {
-      });
-
-    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="tabs"></div>
+          <div id="newHireTab"></div>
+          
+        </div>
+        <div class="col-md-6">
+          <h3> Learning Guide</h3>
+          <div id="2x2"></div>
+        </div>
+        <div class="col-md-3">
+          <h3> How To Guide</h3>
+          <div id="searchHowTo"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="search"></div>
+          
+          <div id="navigator"></div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+
+  $("#2x2").load("2x2/index.html");
+  $("#tabs").load("tabs/index.html");
+  $("#newHireTab").load("newHireTab/index.html");
+  $("#navigator").load("navigator/index.html");
+  $("#search").load("search/index.html");
+  $("#searchHowTo").load("searchHowTo/index.html");
+
+  </script>
+
+<script>
+
+      
+  $.getScript('2x2/script.js', function() {
+    $.get('2x2/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+    });
+  });
+
+  
+  $.getScript('tabs/script.js', function() {
+    $.get('tabs/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+    });
+  });
+
+  $.getScript('newHireTab/script.js', function() {
+    $.get('newHireTab/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+    });
+  });
+  
+  $.getScript('navigator/script.js', function() {
+    $.get('navigator/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+    });
+  });
+
+  
+  $.getScript('search/script.js', function() {
+    $.get('search/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('searchHowTo/script.js', function() {
+    $.get('searchHowTo/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+</script>
+
+
 </html>

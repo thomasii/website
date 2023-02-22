@@ -1,23 +1,25 @@
 let selectBox = document.getElementById("Dropdown");
 
-// Load the XML file using a relative URL
-let xhr = new XMLHttpRequest();
-xhr.open("GET", "options.xml", true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    let xmlDoc = xhr.responseXML;
-    let countries = xmlDoc.getElementsByTagName("country");
+// Parse the XML data
+let parser = new DOMParser();
+let xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+<options>
+  <option text="China" value="https://en.wikipedia.org/wiki/China"></option>
+  <option text="India" value="https://en.wikipedia.org/wiki/India"></option>
+  <option text="Indonesia" value="https://en.wikipedia.org/wiki/Indonesia"></option>
+  <option text="Pakistan" value="https://en.wikipedia.org/wiki/Pakistan"></option>
+  <option text="Bangladesh" value="https://en.wikipedia.org/wiki/Bangladesh"></option>
+</options>`;
+let xmlDoc = parser.parseFromString(xmlString, "text/xml");
+let countries = xmlDoc.getElementsByTagName("option");
 
-    // Populate the select box with the country names
-    for (let i = 0; i < countries.length; i++) {
-      let option = document.createElement("option");
-      option.text = countries[i].getElementsByTagName("name")[0].textContent;
-      option.value = countries[i].getElementsByTagName("code")[0].textContent;
-      selectBox.add(option);
-    }
-  }
-};
-xhr.send();
+// Populate the select box with the country names
+for (let i = 0; i < countries.length; i++) {
+  let option = document.createElement("option");
+  option.text = countries[i].getAttribute("text");
+  option.value = countries[i].getAttribute("value");
+  selectBox.add(option);
+}
 
 function search() {
   // Declare variables
@@ -42,6 +44,6 @@ function search() {
 function redirect() {
   let selectedOption = document.getElementById("Dropdown").value;
   if (selectedOption !== "") {
-    window.location.href = "https://en.wikipedia.org/wiki/" + selectedOption;
+    window.location.href = selectedOption;
   }
 }
