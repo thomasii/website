@@ -1,8 +1,8 @@
-let selectBox = document.getElementById("Dropdown");
+let selectBoxIntern = document.getElementById("DropdownIntern");
 
 // Parse the XML data
-let parser = new DOMParser();
-let xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+let parserIntern = new DOMParser();
+let xmlStringIntern = `<?xml version="1.0" encoding="UTF-8"?>
 <options>
   <option text="China" value="https://en.wikipedia.org/wiki/China"></option>
   <option text="India" value="https://en.wikipedia.org/wiki/India"></option>
@@ -10,23 +10,23 @@ let xmlString = `<?xml version="1.0" encoding="UTF-8"?>
   <option text="Pakistan" value="https://en.wikipedia.org/wiki/Pakistan"></option>
   <option text="Bangladesh" value="https://en.wikipedia.org/wiki/Bangladesh"></option>
 </options>`;
-let xmlDoc = parser.parseFromString(xmlString, "text/xml");
-let countries = xmlDoc.getElementsByTagName("option");
+let xmlDocIntern = parserIntern.parseFromString(xmlStringIntern, "text/xml");
+let countriesIntern = xmlDocIntern.getElementsByTagName("option");
 
 // Populate the select box with the country names
-for (let i = 0; i < countries.length; i++) {
+for (let i = 0; i < countriesIntern.length; i++) {
   let option = document.createElement("option");
-  option.text = countries[i].getAttribute("text");
-  option.value = countries[i].getAttribute("value");
-  selectBox.add(option);
+  option.text = countriesIntern[i].getAttribute("text");
+  option.value = countriesIntern[i].getAttribute("value");
+  selectBoxIntern.add(option);
 }
 
 function search() {
   // Declare variables
   let input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('userInput');
+  input = document.getElementById('userInputIntern');
   filter = input.value.toUpperCase();
-  ul = document.getElementById("Dropdown");
+  ul = document.getElementById("DropdownIntern");
   li = ul.getElementsByTagName('option');
 
   // Loop through all option elements, hide those that don't match the search query
@@ -42,7 +42,7 @@ function search() {
 }
 
 function redirect() {
-  let selectedOption = document.getElementById("Dropdown").value;
+  let selectedOption = document.getElementById("DropdownIntern").value;
   if (selectedOption !== "") {
     window.location.href = selectedOption;
   }
