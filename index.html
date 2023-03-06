@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-3">
           <h3> How To Guide</h3>
-          <div id="searchHowTo"></div>
+          <div id="newSearch"></div>
         </div>
       </div>
       <div class="row">
@@ -49,7 +49,7 @@
   $("#navigator").load("navigator/index.html");
   $("#search").load("search/index.html");
   $("#searchHowTo").load("searchHowTo/index.html");
-
+  $("#newSearch").load("newSearch/index.html");
   </script>
 
 <script>
@@ -89,6 +89,12 @@
 
 $.getScript('searchHowTo/script.js', function() {
     $.get('searchHowTo/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('newSearch/script.js', function() {
+    $.get('newSearch/style.css', function(css) {
       $('head').append('<style>' + css + '</style>');
   });
 });
