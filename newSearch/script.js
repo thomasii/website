@@ -1,11 +1,10 @@
-const data = [
-  { key: "Poodle", value: "https://en.wikipedia.org/wiki/Poodle" },
-  { key: "Labrador Retriever", value: "https://en.wikipedia.org/wiki/Labrador_Retriever" },
-  { key: "German Shepherd", value: "https://en.wikipedia.org/wiki/German_Shepherd" },
-  { key: "Bulldog", value: "https://en.wikipedia.org/wiki/Bulldog" },
-  { key: "Beagle", value: "https://en.wikipedia.org/wiki/Beagle" },
-  { key: "Rottweiler", value: "https://en.wikipedia.org/wiki/Rottweiler" }
-];
+const searchContainer = document.querySelector('.search-container');
+const dataFile = searchContainer.dataset.datafile;
+const dataUrl = `${dataFile}`;
+window.print(dataUrl)
+
+// Initialize the data array as an empty array
+let data = [];
 
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
@@ -51,14 +50,23 @@ function handleClickOutside(event) {
   }
 }
 
-// Add event listeners to search input and submit button
-searchInput.addEventListener("input", handleSearch);
-submitBtn.addEventListener("click", () => {
-  const userInput = searchInput.value.toLowerCase().trim();
-  const result = data.find(item => item.key.toLowerCase() === userInput);
-  if (result) {
-    window.location.href = result.value;
-  }
+
+fetch(dataUrl)
+  .then(response => response.json())
+  .then(dataResponse => {
+    // Update the data array with the response from the fetch call
+    data = dataResponse;
+    window.print(data)
+    // Add event listeners to search input and submit button
+    searchInput.addEventListener("input", handleSearch);
+    submitBtn.addEventListener("click", () => {
+    const userInput = searchInput.value.toLowerCase().trim();
+    const result = data.find(item => item.key.toLowerCase() === userInput);
+    if (result) {
+      window.location.href = result.value;
+    }
 });
 
 document.addEventListener("click", handleClickOutside);
+
+  });
