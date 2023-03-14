@@ -29,6 +29,7 @@
         <div class="col-md-3">
           <h3> How To Guide</h3>
           <div id="newSearch"></div>
+
         </div>
       </div>
       <div class="row">
@@ -50,7 +51,19 @@
   $("#search").load("search/index.html");
   $("#searchHowTo").load("searchHowTo/index.html");
   $("#newSearch").load("newSearch/index.html");
+  $("#basicTrainingSearch").load("basicTrainingSearch/index.html");
+  $("#companyResourcesSearch").load("companyResourcesSearch/index.html");
+  $("#employeeSupportSearch").load("employeeSupportSearch/index.html");
+  $("#hrSupportSearch").load("hrSupportSearch/index.html");
+  $("#itSupportSearch").load("itSupportSearch/index.html");
+  $("#mentalHealthSearch").load("mentalHealthSearch/index.html");
+
   </script>
+
+
+
+
+
 
 <script>
 
@@ -95,6 +108,42 @@ $.getScript('searchHowTo/script.js', function() {
 
 $.getScript('newSearch/script.js', function() {
     $.get('newSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('basicTrainingSearch/script.js', function() {
+    $.get('basicTrainingSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('companyResourcesSearch/script.js', function() {
+    $.get('companyResourcesSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('employeeSupportSearch/script.js', function() {
+    $.get('employeeSupportSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('hrSupportSearch/script.js', function() {
+    $.get('hrSupportSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('itSupportSearch/script.js', function() {
+    $.get('itSupportSearch/style.css', function(css) {
+      $('head').append('<style>' + css + '</style>');
+  });
+});
+
+$.getScript('mentalHealthSearch/script.js', function() {
+    $.get('mentalHealthSearch/style.css', function(css) {
       $('head').append('<style>' + css + '</style>');
   });
 });
