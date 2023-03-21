@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tabs</title>
+</head>
+<body>
+    <h2>Navigation</h2>
+    <p>Navigation information.</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Knowledge')">Knowledge</button>
+        <button class="tablinks" onclick="openCity(event, 'Access to Resources')">Access to Resources</button>
+        <button class="tablinks" onclick="openCity(event, 'Performance Planning / Evaluation')">Performance Planning / Evaluation</button>
+    </div>
+
+    <div id="Knowledge" class="tabcontent">
+        <h3>Knowledge</h3>
+        <div class="search-container" data-datafile="knowledge.js" id="knowledgeData"></div>
+    </div>
+
+    <div id="Access to Resources" class="tabcontent">
+        <h3>Access to Resources</h3>
+        <div class="search-container" data-datafile="accessToResources.js" id="accessToResourcesData"></div>
+    </div>
+
+    <div id="Performance Planning / Evaluation" class="tabcontent">
+        <h3>Performance Planning / Evaluation</h3>
+        <div class="search-container" data-datafile="performance.js" id="performanceData"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+    $("#knowledgeData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "knowledgeData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+$("#accessToResourcesData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "accessToResourcesData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+$("#performanceData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "performanceData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+
+ });
+      </script>
+    </body>
+    </html>
+    

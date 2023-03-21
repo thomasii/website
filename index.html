@@ -13,20 +13,18 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-          <div id="tabs"></div>
-          <div id="newHireTab"></div>
+          <div id="employeeFunction"></div>
         </div>
         <div class="col-md-6">
-          <h3>Learning Guide</h3>
+          <div id="employeeResources"></div>
         </div>
         <div class="col-md-3">
-          <h3>How To Guide</h3>
-          <div class="search-container" data-datafile="data1.js" id="newSearch1"></div>
+          <div id="navigation"></div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="search-container" data-datafile="data2.js" id="newSearch2"></div>  
+          <div id="employeeBenefits"></div>
         </div>
       </div>
     </div>
@@ -37,28 +35,11 @@
     <!-- Script to load HTML and JS files into containers -->
     <script>
       $(document).ready(function () {
-        $("#tabs").load("tabs/index.html");
-        $("#newHireTab").load("newHireTab/index.html");
-      
-        // Load the HTML for the newSearch modules into the search containers
-        $("#newSearch1").load("newSearch/index.html", function () {
-          // Load the script and style after the HTML has been loaded
-          $.get("newSearch/style.css", function (css) {
-            $(this).append("<style>" + css + "</style>");
-          }.bind(this));
-          // Update the data attribute of the loaded container
-          $(this).find(".search-container").attr("data-datafile", "data1.js");
-          $.getScript("newSearch/script.js", function () {});
-        });
-      
-        $("#newSearch2").load("newSearch/index.html", function () {
-          // Load the script and style after the HTML has been loaded
-          $.get("newSearch/style.css", function (css) {
-            $(this).append("<style>" + css + "</style>");
-          }.bind(this));
-          // Update the data attribute of the loaded container
-          $(this).find(".search-container").attr("data-datafile", "data2.js");
-          $.getScript("newSearch/script.js", function () {});
-        });
+        $("#employeeFunction").load("employeeFunction/index.html");
+        $("#employeeResources").load("employeeResources/index.html");
+        $("#navigation").load("navigation/index.html");
+        $("#employeeBenefits").load("employeeBenefits/index.html");
       });
-      </script>
+    </script>
+  </body>
+</html>

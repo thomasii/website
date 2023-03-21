@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tabs</title>
+</head>
+<body>
+    <h2>Navigation</h2>
+    <p>Navigation information.</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Physical Site')">Physical Site</button>
+        <button class="tablinks" onclick="openCity(event, 'Business Organization Structure')">Business Organization Structure</button>
+        <button class="tablinks" onclick="openCity(event, 'Engagement')">Engagement</button>
+        <button class="tablinks" onclick="openCity(event, 'Corporate Info')">Corporate Info</button>
+    </div>
+
+    <div id="Physical Site" class="tabcontent">
+        <h3>Physical Site</h3>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Facility')">Facility</button>
+            <button class="tablinks" onclick="openCity(event, 'EHS')">EHS</button>
+            <button class="tablinks" onclick="openCity(event, 'Dress Code')">Dress Code</button>
+        </div>
+        <div id="Facility" class="tabcontent">
+            <h3>Facility</h3>
+            <p>Here is information about our facility.</p>
+        </div>
+        <div id="EHS" class="tabcontent">
+            <h3>EHS</h3>
+            <p>Here is information about our EHS policies.</p>
+        </div>
+        <div id="Dress Code" class="tabcontent">
+            <h3>Dress Code</h3>
+            <p>Here is information about our dress code policies.</p>
+        </div>
+        <div class="search-container" data-datafile="physicalSiteData.js" id="physicalSiteData"></div>
+    </div>
+
+    <div id="Business Organization Structure" class="tabcontent">
+        <h3>Business Organization Structure</h3>
+        <div class="search-container" data-datafile="businessOrganizationStructureData.js" id="businessOrganizationStructureData"></div>
+    </div>
+
+    <div id="Engagement" class="tabcontent">
+        <h3>Engagement</h3>
+        <div class="search-container" data-datafile="engagementData.js" id="engagementData"></div>
+    </div>
+
+    <div id="Corporate Info" class="tabcontent">
+        <h3>Corporate Info</h3>
+        <div class="search-container" data-datafile="corporateInfoData.js" id="corporateInfoData"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+    $("#physicalSiteData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "physicalSiteData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+$("#businessOrganizationStructureData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "businessOrganizationStructureData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+$("#engagementData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "engagementData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+$("#corporateInfoData").load("../newSearch/index.html", function() {
+    $(this).find(".search-container").attr("data-datafile", "corporateInfoData.js");
+    $.get("../newSearch/style.css", function(css) {
+        $(this).append("<style>" + css + "</style>");
+    }.bind(this));
+    $.getScript("../newSearch/script.js", function() {});
+});
+
+ });
+      </script>
+    </body>
+    </html>
+    

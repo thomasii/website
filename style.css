@@ -1,59 +1,62 @@
 .btn-custom {
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 25px;
-    font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+  font-size: 18px;
   }
   .btn-green {
-    background-color: rgb(199, 97, 165);
-    color: white;
+  background-color: rgb(199, 97, 165);
+  color: white;
   }
   .btn-blue {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
   }
   .btn-red {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
   }
   .btn-yellow {
-    background-color: yellow;
-    color: black;
+  background-color: yellow;
+  color: black;
   }
-
+  
   .jumbotron {
-	background-color: #a76622;
-}
-
-.search-box {
-	display: flex;
-	justify-content: center;
-	margin-top: 50px;
-}
-
-.form-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: #808080;
+  color: white;
+  }
+  
+  .search-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  }
+  
+  .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   }
   
   #Dropdown {
-    margin-top: 20px;
-    max-width: 300px;
+  margin-top: 20px;
+  max-width: 300px;
   }
-
-  body {font-family: Arial;}
-
-/* Style the tab */
-.tab {
+  
+  body {
+  font-family: Arial;
+  }
+  
+  /* Style the tab */
+  .tab {
   overflow: hidden;
   border: 1px solid #9b5151;
-  background-color: #bbe45b;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
+  background-color: #d9d9d9;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
   background-color: inherit;
   float: left;
   border: none;
@@ -62,40 +65,42 @@
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #3a9292;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #774d4d;
-}
-
-/* Style the tab content */
-.tabcontent {
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+  background-color: #a6a6a6;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+  background-color: #808080;
+  color: white;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
   display: none;
   padding: 6px 12px;
   border: 1px solid #b1a751;
   border-top: none;
-}
-
-.search-container {
+  background-color: #f2f2f2;
+  }
+  
+  .search-container {
   position: relative;
-}
-
-#search-input {
+  }
+  
+  #search-input {
   width: 300px;
   padding: 8px;
   border: none;
   border-bottom: 2px solid black;
   font-size: 16px;
   outline: none;
-}
-
-#search-results {
+  }
+  
+  #search-results {
   position: absolute;
   top: 40px;
   left: 0;
@@ -109,18 +114,18 @@
   padding: 0;
   margin: 0;
   z-index: 1;
-}
-
-#search-results li {
+  }
+  
+  #search-results li {
   padding: 8px;
   cursor: pointer;
-}
-
-#search-results li:hover {
+  }
+  
+  #search-results li:hover {
   background-color: lightgray;
-}
-
-#submit-btn {
+  }
+  
+  #submit-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -129,4 +134,4 @@
   color: white;
   border: none;
   cursor: pointer;
-}
+  }
