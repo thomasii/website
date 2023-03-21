@@ -102,7 +102,7 @@
   width: 300px;
   max-height: 200px;
   overflow-y: auto;
-  background-color: white;
+  background-color: rgb(212, 203, 203);
   border: 1px solid black;
   border-top: none;
   list-style: none;

@@ -6,7 +6,7 @@
     width: 300px;
     padding: 8px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(224, 216, 216);
     font-size: 16px;
     outline: none;
   }
@@ -18,7 +18,7 @@
     width: 300px;
     max-height: 200px;
     overflow-y: auto;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
     border-top: none;
     list-style: none;

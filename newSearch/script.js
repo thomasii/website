@@ -1,9 +1,17 @@
-
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
 const submitBtn = document.getElementById("submit-btn");
 
 let filteredData = [];
+
+let data = []; // initialize data as an empty array
+
+// Load data from JSON file
+fetch(document.querySelector('.search-container').getAttribute('data-datafile'))
+  .then(response => response.json())
+  .then(json => {
+    data = json; // assign retrieved data to the data variable
+  });
 
 function renderResults() {
   // Clear previous search results
