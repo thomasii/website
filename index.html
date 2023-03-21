@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-6">
           <h3> Learning Guide</h3>
-          <div id="2x2"></div>
+
         </div>
         <div class="col-md-3">
           <h3> How To Guide</h3>
@@ -34,9 +34,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div id="search"></div>
-          
-          <div id="navigator"></div>
+
         </div>
       </div>
     </div>
@@ -44,36 +42,13 @@
 
   <script>
 
-  $("#2x2").load("2x2/index.html");
   $("#tabs").load("tabs/index.html");
   $("#newHireTab").load("newHireTab/index.html");
-  $("#navigator").load("navigator/index.html");
-  $("#search").load("search/index.html");
-  $("#searchHowTo").load("searchHowTo/index.html");
   $("#newSearch").load("newSearch/index.html");
-  $("#basicTrainingSearch").load("basicTrainingSearch/index.html");
-  $("#companyResourcesSearch").load("companyResourcesSearch/index.html");
-  $("#employeeSupportSearch").load("employeeSupportSearch/index.html");
-  $("#hrSupportSearch").load("hrSupportSearch/index.html");
-  $("#itSupportSearch").load("itSupportSearch/index.html");
-  $("#mentalHealthSearch").load("mentalHealthSearch/index.html");
 
   </script>
 
-
-
-
-
-
 <script>
-
-      
-  $.getScript('2x2/script.js', function() {
-    $.get('2x2/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-    });
-  });
-
   
   $.getScript('tabs/script.js', function() {
     $.get('tabs/style.css', function(css) {
@@ -86,25 +61,6 @@
       $('head').append('<style>' + css + '</style>');
     });
   });
-  
-  $.getScript('navigator/script.js', function() {
-    $.get('navigator/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-    });
-  });
-
-  
-  $.getScript('search/script.js', function() {
-    $.get('search/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('searchHowTo/script.js', function() {
-    $.get('searchHowTo/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
 
 $.getScript('newSearch/script.js', function() {
     $.get('newSearch/style.css', function(css) {
@@ -112,41 +68,6 @@ $.getScript('newSearch/script.js', function() {
   });
 });
 
-$.getScript('basicTrainingSearch/script.js', function() {
-    $.get('basicTrainingSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('companyResourcesSearch/script.js', function() {
-    $.get('companyResourcesSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('employeeSupportSearch/script.js', function() {
-    $.get('employeeSupportSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('hrSupportSearch/script.js', function() {
-    $.get('hrSupportSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('itSupportSearch/script.js', function() {
-    $.get('itSupportSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-$.getScript('mentalHealthSearch/script.js', function() {
-    $.get('mentalHealthSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
 
 </script>
 
