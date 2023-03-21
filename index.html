@@ -1,18 +1,13 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>test page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-    crossorigin="anonymous">
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+      crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
-    <!-- Bootstrap CSS -->
-
-
   </head>
   <body>
     <div class="container-fluid">
@@ -20,56 +15,50 @@
         <div class="col-md-3">
           <div id="tabs"></div>
           <div id="newHireTab"></div>
-          
         </div>
         <div class="col-md-6">
-          <h3> Learning Guide</h3>
-
+          <h3>Learning Guide</h3>
         </div>
         <div class="col-md-3">
-          <h3> How To Guide</h3>
-          <div id="newSearch"></div>
-
+          <h3>How To Guide</h3>
+          <div class="search-container" data-datafile="data1.js" id="newSearch1"></div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-
+          <div class="search-container" data-datafile="data2.js" id="newSearch2"></div>  
         </div>
       </div>
     </div>
-  </body>
-
-  <script>
-
-  $("#tabs").load("tabs/index.html");
-  $("#newHireTab").load("newHireTab/index.html");
-  $("#newSearch").load("newSearch/index.html");
-
-  </script>
-
-<script>
-  
-  $.getScript('tabs/script.js', function() {
-    $.get('tabs/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-    });
-  });
-
-  $.getScript('newHireTab/script.js', function() {
-    $.get('newHireTab/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-    });
-  });
-
-$.getScript('newSearch/script.js', function() {
-    $.get('newSearch/style.css', function(css) {
-      $('head').append('<style>' + css + '</style>');
-  });
-});
-
-
-</script>
-
-
-</html>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- Script to load HTML and JS files into containers -->
+    <script>
+      $(document).ready(function () {
+        $("#tabs").load("tabs/index.html");
+        $("#newHireTab").load("newHireTab/index.html");
+      
+        // Load the HTML for the newSearch modules into the search containers
+        $("#newSearch1").load("newSearch/index.html", function () {
+          // Load the script and style after the HTML has been loaded
+          $.get("newSearch/style.css", function (css) {
+            $(this).append("<style>" + css + "</style>");
+          }.bind(this));
+          // Update the data attribute of the loaded container
+          $(this).find(".search-container").attr("data-datafile", "data1.js");
+          $.getScript("newSearch/script.js", function () {});
+        });
+      
+        $("#newSearch2").load("newSearch/index.html", function () {
+          // Load the script and style after the HTML has been loaded
+          $.get("newSearch/style.css", function (css) {
+            $(this).append("<style>" + css + "</style>");
+          }.bind(this));
+          // Update the data attribute of the loaded container
+          $(this).find(".search-container").attr("data-datafile", "data2.js");
+          $.getScript("newSearch/script.js", function () {});
+        });
+      });
+      </script>
