@@ -70,4 +70,8 @@ searchContainers.forEach((searchContainer) => {
   });
 
   document.addEventListener("click", handleClickOutside);
+
+  searchInput.addEventListener("focus", handleSearch);
+  
 });
+

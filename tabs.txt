@@ -64,3 +64,38 @@ o	What are the events
 •	Corporate Info
 o	Corporate Sharepoint
 o	Sector Intranet Homepages
+
+
+Based on your requirements, I suggest a new organization of the groups as follows:
+
+Employee Onboarding and Training
+
+New Employee Guide (1 and 2 week training)
+Technical Training
+Teams Help
+Access to Resources and Systems
+
+Equipment and Software Ordering
+Account Creation and Management
+System Access (confluence, Git, etc)
+Performance Planning and Evaluation
+
+Expectations and Activities (30/60/90 days)
+Ethics and Compliance
+Employee Benefits and Wellness
+
+Compensation and Total Rewards
+Mental Health Resources
+Education Assistance
+Career Advancement and Development
+Site Navigation and Business Structure
+
+Physical Site Facilities
+Network Connections
+EHS and Dress Code Policies
+Business Organization Structure and Programs
+Corporate Information and Collaboration
+
+Corporate Sharepoint and Intranet Homepages
+Collaboration Tools and Processes (Teams, Discord, etc)
+Event Information and Engagement Groups (ERGs, early career)
