@@ -1,29 +1,40 @@
-/* Style for sections */
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 100px;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 0.5s;
-    width: 100%;
-    margin-left: auto;
-  }
-  
-  section:nth-of-type(odd) {
-    background-color: #f0f0f0;
-  }
-  
-  section:nth-of-type(even) {
-    background-color: #fff;
-  }
-  
-  .section1 {
-    background-image: url('./BENEFITS.jpg');
-  }
-  
-  .section2 {
-    background-image: url('./XETRON.avif');
-  }
+/* Additional styles for sections */
+.section-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.section-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
