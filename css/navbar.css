@@ -85,19 +85,18 @@
 
 .navLeft a::after {
   content: attr(data-title);
-  position: absolute; /* Change this line */
+  position: absolute;
   white-space: nowrap;
   background-color: var(--nav-tooltip-bg-color);
   padding: 5px 10px;
   border-radius: 0 5px 5px 0;
-  transform: translateX(-10px);
+  left: calc(100% + 10px);
   transition: all 0.3s;
   opacity: 0;
   pointer-events: none;
   color: #fff;
-  top: 50%; /* Add this line */
-  left: calc(100% + 10px); /* Add this line */
-  transform: translateY(-50%); /* Add this line */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navLeft a:hover::after {
