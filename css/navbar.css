@@ -102,3 +102,32 @@
     left: calc(100% + 10px);
     opacity: 1;
   }
+
+  .nav a:hover {
+    color: var(--nav-link-hover-color);
+  }
+  
+  .nav a span {
+    display: none;
+  }
+  
+  .nav a::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+    background-color: var(--nav-tooltip-bg-color);
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    color: #fff;
+  }
+  
+  .nav a:hover::after {
+    left: calc(100% + 10px);
+    opacity: 1;
+    transform: translateX(0);
+  }
