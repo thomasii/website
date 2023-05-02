@@ -96,12 +96,11 @@
   pointer-events: none;
   color: #fff;
   top: 50%; /* Add this line */
-  left: 100%; /* Add this line */
+  left: calc(100% + 10px); /* Add this line */
   transform: translateY(-50%); /* Add this line */
 }
 
 .navLeft a:hover::after {
   opacity: 1;
-  transform: translateY(-50%) translateX(10px); /* Update this line */
+  transform: translateY(-50%);
 }
-
