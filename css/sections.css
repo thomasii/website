@@ -111,9 +111,11 @@ section {
 [data-aos="fade-left"] {
     padding-left: 0;
     transition-duration: 1.3s;
+    align-self: flex-start;
 }
 
 [data-aos="fade-right"] {
     padding-right: 0;
     transition-duration: 1.3s;
+    align-self: flex-end;
 }
