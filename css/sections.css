@@ -1,4 +1,4 @@
-/* Style for sections */
+  /* Style for sections */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 section {
@@ -80,3 +80,15 @@ section:nth-of-type(even) {
     padding: 20px;
     border-radius: 10px;
 }
+
+  .section1 {
+    background-image: url('./ngcSpace.jpg');
+  }
+  
+  .section2 {
+    background-image: url('./happy2.jpg');
+  }
+
+  .section3 {
+    background-image: url('./business-background.jpg');
+  }
