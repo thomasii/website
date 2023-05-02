@@ -113,3 +113,16 @@
       </div>
       </section>
   </main>
+
+  <script>
+    // Tooltip positioning
+    document.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("mouseenter", (e) => {
+    const tooltip = e.target.querySelector("::after");
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const navRect = e.target.closest(".nav").getBoundingClientRect();
+    tooltip.style.top = `${e.target.offsetTop}px`;
+    tooltip.style.left = `${navRect.width}px`;
+  });
+  });
+  </script>
