@@ -2,126 +2,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin-left: auto;
-    padding-top: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  padding-top: 2rem;
 }
 
 .title-container {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    text-align: center;
-  }
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
 
 .title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #4b4b4b;
-    margin: 0;
-    text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin: 0;
+  text-align: center;
 }
 
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .section1 .background-image {
-    background-image: url('./ngcSpace.jpg');
+  background-image: url('./ngcSpace.jpg');
+}
+
+.section2 .background-image {
+  background-image: url('./xetron.jpg');
 }
 
 .subsection-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 80%;
-    gap: 2rem;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .text-container {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .section-header, .subheader, .section-content {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section-header {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #4b4b4b;
-    margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .subheader {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #4b4b4b;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
 }
 
 .section-content {
-    font-size: 1.2rem;
-    color: #4b4b4b;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .section-button {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .section-button:hover {
-    background-color: #0056b3;
-    color: #ffffff;
+  background-color: #0056b3;
+  color: #ffffff;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 [data-aos="fade-left"] {
-    padding-left: 0;
-    transition-duration: 1.3s;
-    align-self: flex-start;
+  padding-left: 0;
+  transition-duration: 1.3s;
+  align-self: flex-end;
 }
 
 [data-aos="fade-right"] {
     padding-right: 0;
     transition-duration: 1.3s;
-    align-self: flex-end;
-}
+    align-self: flex-start;
+    }
+    
+    
+    
+    
+    
