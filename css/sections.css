@@ -1,4 +1,4 @@
-/* Style for sections */
+  /* Style for sections */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 section {
@@ -94,6 +94,7 @@ section {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 section:nth-of-type(odd) {
     background-color: #f0f0f0;
 }
@@ -101,3 +102,22 @@ section:nth-of-type(odd) {
 section:nth-of-type(even) {
     background-color: #fff;
 }
+=======
+.text-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+  .section1 {
+    background-image: url('./ngcSpace.jpg');
+  }
+  
+  .section2 {
+    background-image: url('./happy2.jpg');
+  }
+
+  .section3 {
+    background-image: url('./business-background.jpg');
+  }
+>>>>>>> cc13b6ea97d7ab265d758773a31624400290881f
