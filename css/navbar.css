@@ -90,6 +90,7 @@
   background-color: var(--nav-tooltip-bg-color);
   padding: 5px 10px;
   border-radius: 0 5px 5px 0;
+  transform: translateX(-10px);
   transition: all 0.3s;
   opacity: 0;
   pointer-events: none;
@@ -101,3 +102,4 @@
   opacity: 1;
   transform: translateX(0);
 }
+
