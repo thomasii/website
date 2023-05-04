@@ -2,18 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin-left: auto;
   padding-top: 2rem;
 }
 
 .title-container {
-  position: absolute;
+  position: relative;
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -33,23 +31,12 @@ section {
   text-align: center;
 }
 
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
+.section1 {
+  background-color: #f0f0f0;
 }
 
-.section1 .background-image {
-  background-image: url('./ngcSpace.jpg');
-}
-
-.section2 .background-image {
-  background-image: url('./xetron.jpg');
+.section2 {
+  background-color: #d0d0d0;
 }
 
 .subsection-container {
@@ -128,12 +115,7 @@ section {
 }
 
 [data-aos="fade-right"] {
-    padding-right: 0;
-    transition-duration: 1.3s;
-    align-self: flex-start;
-    }
-    
-    
-    
-    
-    
+  padding-right: 0;
+  transition-duration: 1.3s;
+  align-self: flex-start;
+}
