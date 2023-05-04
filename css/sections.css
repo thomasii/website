@@ -42,7 +42,7 @@ section {
 .subsection-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 80%;
   gap: 2rem;
   margin-top: 2rem;
@@ -53,6 +53,7 @@ section {
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
+  width: 100%;
 }
 
 .section-header, .subheader, .section-content {
@@ -81,6 +82,7 @@ section {
   color: #4b4b4b;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  padding-left: 1rem;
 }
 
 .section-button {
