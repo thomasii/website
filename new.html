@@ -1,0 +1,266 @@
+<main>
+<Style>
+    /* Style for sections */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.title-container {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin: 0;
+  text-align: center;
+}
+
+.section1 {
+  background-color: #f0f0f0;
+}
+
+.images-container, .images-placeholder {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.value {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  flex-basis: 45%; /* This will ensure that no more than 2 values are on one line */
+  margin: 10px;
+}
+
+.title-container {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin: 0;
+  text-align: center;
+}
+
+.section1 {
+  background-color: #f0f0f0;
+}
+
+.section2 {
+  background-color: #d0d0d0;
+}
+
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.text-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-header, .subheader, .section-content {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center; /* Center the text */
+  width: 100%; /* Take up the full width */
+}
+
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the children */
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+}
+
+.section-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.intro-container {
+    display: flex; /* This makes the text and images appear on the same line */
+    align-items: flex-start; /* This makes the text and images align to the top */
+    justify-content: space-between; /* This adds some space between the text and images */
+    gap: 20px; /* This adds some space between the text and images */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* This creates two columns */
+    grid-gap: 10px; /* This is the gap between the grid items */
+    max-width: 50%; /* This makes the grid take up only 50% of the container width */
+}
+
+figure {
+    margin: 0; /* Remove the default margin from figures */
+}
+
+img {
+    max-width: 100%; /* This makes the images responsive */
+    height: auto; /* This maintains the image aspect ratio */
+}
+
+figcaption {
+    text-align: center; /* Center the image captions */
+}
+
+
+[data-aos="fade-left"] {
+  padding-left: 0;
+  transition-duration: 1.3s;
+  align-self: flex-end;
+}
+
+[data-aos="fade-right"] {
+  padding-right: 0;
+  transition-duration: 1.3s;
+  align-self: flex-start;
+}
+</Style>
+<body>
+    <section class="section1">
+        <div class="title-container">
+            <h1 class="title">Northrop Grumman today... <a href="your-link-here" target="_blank">Defining Possible.</a></h1>
+        </div>
+        <div class="subsection-container" data-aos="fade-left">
+            <div class="intro-container">
+                <p class="section-content">Welcome to one of the leading space, aeronautic, cyber and defense producers in the world!</p>
+                <div class="images-container">
+                    <div class="grid">
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 1">
+                            <figcaption>Caption 1</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 2">
+                            <figcaption>Caption 2</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 3">
+                            <figcaption>Caption 3</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 4">
+                            <figcaption>Caption 4</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subsection-container">
+            <div class="images-placeholder" data-aos="fade-right">
+                <!-- Placeholder images here -->
+            </div>
+            <p class="section-content">NGC has a established domestic and foreign presence with over 90,000 employees worldwide.</p>
+        </div>
+        <div class="values-container">
+            <h2 class="section-header"><a href="your-values-link-here" target="_blank">Our Values</a></h2>
+            <div class="value" data-aos="fade-left">We do the right thing</div>
+            <div class="value" data-aos="fade-right">We do what we promise</div>
+            <div class="value" data-aos="fade-left">We commit to shared success</div>
+            <div class="value" data-aos="fade-right">We pioneer</div>
+        </div>
+    </section>
+
+
+</body>
+<script>
+    AOS.init();
+</script>
+</main>
