@@ -274,10 +274,20 @@ figcaption {
 
 
 .circle {
-  width: 200px;
+  width: 300px;
   height: 200px;
   border-radius: 50%;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-image {
+  width: 175px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .leader-details {
@@ -298,6 +308,71 @@ figcaption {
 
 .leader-position {
   font-size: 1rem;
+}
+
+.sectors-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #f5f5f5; /* Feather gray background */
+  padding: 20px;
+}
+
+.sector {
+  background-color: #dcdcdc; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sector-details {
+  margin-left: 20px;
+}
+
+.sector-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.sector-leader {
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.value-description {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+}
+
+.value-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.value-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 
@@ -345,39 +420,108 @@ figcaption {
                 </div>
             </div>
         </div>
-        <div class="subsection-container">
-            <div class="images-placeholder" data-aos="fade-right">
-                <!-- Placeholder images here -->
+        <div class="section-header-container">
+            <h1 class="section-header">Our Values</h1>
+          </div>
+          <div class="section-content">
+            <h2 class="title">Our Values</h2>
+            <p>Supporting our ability to deliver on our mission and vision, our values reaffirm what is important to us as an organization.</p>
+          </div>
+          <div class="values-container">
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value1.jpg" alt="Value 1" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We do the right thing</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We do the right thing in more detail...</p>
+              </div>
             </div>
-            <p class="section-content">NGC has a established domestic and foreign presence with over 90,000 employees worldwide.</p>
-        </div>
-        <div class="values-container">
-            <div class="section-header-container">
-                <h1 class="section-header">Our Values</h1>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value2.jpg" alt="Value 2" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We do what we promise</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We do what we promise in more detail...</p>
+              </div>
             </div>
-            <div class="value" data-aos="fade-left">We do the right thing</div>
-            <div class="value" data-aos="fade-right">We do what we promise</div>
-            <div class="value" data-aos="fade-left">We commit to shared success</div>
-            <div class="value" data-aos="fade-right">We pioneer</div>
-        </div>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value3.jpg" alt="Value 3" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We commit to shared success</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We commit to shared success in more detail...</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value4.jpg" alt="Value 4" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We pioneer</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We pioneer in more detail...</p>
+              </div>
+            </div>
+          </div>
   <div class="values-container">
     <div class="section-header-container">
       <h1 class="section-header">Our Organization</h1>
     </div>
     <div class="section-content">Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a>
       and <a href="#" class="company-link">Board of Directors</a></div>
-    <div class="org-structure">
-      <div class="rectangle">
+      <div class="org-structure">
+        <div class="rectangle">
           <h2 class="org-title">Northrop Grumman Corporate</h2>
-        <div class="circle"></div>
-        <div class="image"></div>
-        <div class="leader-details">
-          <div class="leader-name">Kathy Wardern</div>
-          <div class="leader-role">Chair</div>
-          <div class="leader-position">CEO and President</div>
+          <div class="circle"></div>
+          <div class="image"></div>
+          <div class="leader-details">
+            <div class="leader-name">Kathy Wardern</div>
+            <div class="leader-role">Chair</div>
+            <div class="leader-position">CEO and President</div>
+          </div>
         </div>
       </div>
-    </div>
+      
+      <div class="sectors-container">
+        <div class="sector">
+          <div class="circle"></div>
+          <div class="image"></div>
+          <div class="sector-details">
+            <div class="sector-name">Aeronautics Systems</div>
+            <div class="sector-leader">Tom Jones, President</div>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="circle"></div>
+          <div class="image"></div>
+          <div class="sector-details">
+            <div class="sector-name">Defense Systems</div>
+            <div class="sector-leader">Roshan Roeder, President</div>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="circle"></div>
+          <div class="image"></div>
+          <div class="sector-details">
+            <div class="sector-name">Mission Systems</div>
+            <div class="sector-leader">Mark Caylor, President</div>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="circle"></div>
+          <div class="image"></div>
+          <div class="sector-details">
+            <div class="sector-name">Space Systems</div>
+            <div class="sector-leader">Tom Wilson, President</div>
+          </div>
+        </div>
+      </div>
   </div>
     </section>
 
