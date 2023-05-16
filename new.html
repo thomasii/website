@@ -4,6 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 section {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent), linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent);
+  background-size: 200% 200%;
+  background-position: top left, center;
+  animation: background-animation 8s linear infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: top left, center;
+  }
+  100% {
+    background-position: bottom right, center;
+  }
+}
+
+section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -28,9 +45,12 @@ section {
   font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #4b4b4b;
+  color: #ffffff;
   margin: 0;
   text-align: center;
+
+   /* Glowing effect */
+   text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #030303;
 }
 
 .section1 {
@@ -62,27 +82,6 @@ section {
   margin: 10px;
 }
 
-.title-container {
-  position: relative;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px 20px;
-  border-radius: 10px;
-  max-width: 80%;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #4b4b4b;
-  margin: 0;
-  text-align: center;
-}
-
 .section1 {
   background-color: #f0f0f0;
 }
@@ -90,6 +89,7 @@ section {
 .section2 {
   background-color: #d0d0d0;
 }
+
 
 .subsection-container {
   display: flex;
@@ -112,15 +112,48 @@ section {
   font-family: 'Roboto', sans-serif;
 }
 
+.section-header-container {
+  width: 80%;
+  background-color: navy;
+  border-radius: 10px;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-header-container::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 10%;
+  height: 80%;
+  padding-bottom: 0%;
+  background-color: white;
+  z-index: 1;
+}
+
+.section-header-container::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 5.5%;
+  width: 10%;
+  height: 70%;
+  background-color: navy;
+  z-index: 2;
+}
+
 .section-header {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #4b4b4b;
+  color: #ffffff;
   margin-bottom: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
   padding: 10px 20px;
   border-radius: 10px;
-  text-align: center; /* Center the text */
+  text-align: left; /* Center the text */
   width: 100%; /* Take up the full width */
 }
 
@@ -141,11 +174,14 @@ section {
 }
 
 .section-content {
-  font-size: 1.2rem;
-  color: #4b4b4b;
+  font-size: 2rem;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   padding-left: 1rem;
+
+   /* Glowing effect */
+   text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #030303;
 }
 
 .section-button {
@@ -181,23 +217,87 @@ section {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* This creates two columns */
-    grid-gap: 10px; /* This is the gap between the grid items */
-    max-width: 50%; /* This makes the grid take up only 50% of the container width */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 100%;
 }
 
 figure {
-    margin: 0; /* Remove the default margin from figures */
+  margin: 0;
 }
 
 img {
-    max-width: 100%; /* This makes the images responsive */
-    height: auto; /* This maintains the image aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
 figcaption {
-    text-align: center; /* Center the image captions */
+  text-align: center;
+}
+
+.org-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.org-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+.rectangle {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.company-link {
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.3s;
+}
+
+.company-link:hover {
+  color: #0056b3;
+}
+
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+
+.leader-details {
+  text-align: left;
+  color: #ffffff;
+}
+
+.leader-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.leader-role {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.leader-position {
+  font-size: 1rem;
 }
 
 
@@ -215,9 +315,11 @@ figcaption {
 </Style>
 <body>
     <section class="section1">
-        <div class="title-container">
-            <h1 class="title">Northrop Grumman today... <a href="your-link-here" target="_blank">Defining Possible.</a></h1>
+        <div class="section-header-container">
+            <h1 class="section-header">Our Company</h1>
         </div>
+        <h1 class="title">Welcome to <a href="https://example.com" target="_blank" class="company-link">Northrop Grumman</a>  
+            <br> Where we are <a href="https://example.com" target="_blank" class="company-link">Defining Possible</a></h1>
         <div class="subsection-container" data-aos="fade-left">
             <div class="intro-container">
                 <p class="section-content">Welcome to one of the leading space, aeronautic, cyber and defense producers in the world!</p>
@@ -250,12 +352,33 @@ figcaption {
             <p class="section-content">NGC has a established domestic and foreign presence with over 90,000 employees worldwide.</p>
         </div>
         <div class="values-container">
-            <h2 class="section-header"><a href="your-values-link-here" target="_blank">Our Values</a></h2>
+            <div class="section-header-container">
+                <h1 class="section-header">Our Values</h1>
+            </div>
             <div class="value" data-aos="fade-left">We do the right thing</div>
             <div class="value" data-aos="fade-right">We do what we promise</div>
             <div class="value" data-aos="fade-left">We commit to shared success</div>
             <div class="value" data-aos="fade-right">We pioneer</div>
         </div>
+  <div class="values-container">
+    <div class="section-header-container">
+      <h1 class="section-header">Our Organization</h1>
+    </div>
+    <div class="section-content">Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a>
+      and <a href="#" class="company-link">Board of Directors</a></div>
+    <div class="org-structure">
+      <div class="rectangle">
+          <h2 class="org-title">Northrop Grumman Corporate</h2>
+        <div class="circle"></div>
+        <div class="image"></div>
+        <div class="leader-details">
+          <div class="leader-name">Kathy Wardern</div>
+          <div class="leader-role">Chair</div>
+          <div class="leader-position">CEO and President</div>
+        </div>
+      </div>
+    </div>
+  </div>
     </section>
 
 
