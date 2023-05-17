@@ -244,12 +244,27 @@ figcaption {
   margin-top: 2rem;
 }
 
+.org-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 .org-title {
+  /* Existing styles */
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 35rem;
+  position: relative;
+  z-index: 2; /* Add this line to ensure the text appears above the circle */
 }
 
 .rectangle {
@@ -257,8 +272,9 @@ figcaption {
   align-items: center;
   background-color: #000000;
   padding: 1.5rem;
-  border-radius: 10px;
-  width: 60%;
+  position: relative; 
+  padding: 3rem 8rem 3rem 3rem;
+  border-radius: 
 }
 
 .company-link {
@@ -275,17 +291,38 @@ figcaption {
 
 .circle {
   width: 300px;
-  height: 200px;
+  height: 300px;
   border-radius: 50%;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Existing styles */
+  position: absolute;
+  top: -50px; /* Adjust the top position as needed */
+  left: calc(50% - 0px);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Existing styles */
+  position: absolute;
+  left: calc(35%);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
 }
 
 .circle-image {
-  width: 175px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-color: #ffffff;
 }
@@ -293,6 +330,10 @@ figcaption {
 .leader-details {
   text-align: left;
   color: #ffffff;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  margin-left: 2rem;
 }
 
 .leader-name {
@@ -311,11 +352,12 @@ figcaption {
 }
 
 .sectors-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   background-color: #f5f5f5; /* Feather gray background */
   padding: 20px;
+  display: flex; /* Change grid to flex to remove the grid layout */
+  justify-content: space-around; /* Add space between sectors */
 }
 
 .sector {
@@ -324,10 +366,17 @@ figcaption {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  /* Existing styles */
+  position: relative; /* Add this line to make the sector a positioned container */
+  padding: 3rem;
 }
 
 .sector-details {
-  margin-left: 20px;
+  margin-left: 20rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .sector-name {
@@ -469,60 +518,73 @@ figcaption {
               </div>
             </div>
           </div>
-  <div class="values-container">
-    <div class="section-header-container">
-      <h1 class="section-header">Our Organization</h1>
-    </div>
-    <div class="section-content">Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a>
-      and <a href="#" class="company-link">Board of Directors</a></div>
-      <div class="org-structure">
-        <div class="rectangle">
-          <h2 class="org-title">Northrop Grumman Corporate</h2>
-          <div class="circle"></div>
-          <div class="image"></div>
-          <div class="leader-details">
-            <div class="leader-name">Kathy Wardern</div>
-            <div class="leader-role">Chair</div>
-            <div class="leader-position">CEO and President</div>
+          <div class="values-container">
+            <div class="section-header-container">
+              <h1 class="section-header">Our Organization</h1>
+            </div>
+            <div class="section-content">
+              Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a> and <a href="#" class="company-link">Board of Directors</a>
+            </div>
+            <div class="org-structure">
+              <div class="rectangle">
+                <h2 class="org-title">Northrop Grumman Corporate</h2>
+                <div class="circle"></div>
+                <div class="image"></div>
+                <div class="leader-details">
+                  <div class="leader-name">Kathy Wardern</div>
+                  <div class="leader-role">Chair</div>
+                  <div class="leader-position">CEO and President</div>
+                </div>
+              </div>
+            </div>
+            <h1 class="section-header">Sectors</h1>
+            <div class="sectors-container">
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Aeronautics Systems</a>
+                  <div class="sector-leader">Tom Jones, President</div>
+                  <div class="additional-info">
+                    Additional information about Aeronautics Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Defense Systems</a>
+                  <div class="sector-leader">Roshan Roeder, President</div>
+                  <div class="additional-info">
+                    Additional information about Defense Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Mission Systems</a>
+                  <div class="sector-leader">Mark Caylor, President</div>
+                  <div class="additional-info">
+                    Additional information about Mission Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Space Systems</a>
+                  <div class="sector-leader">Tom Wilson, President</div>
+                  <div class="additional-info">
+                    Additional information about Space Systems
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      
-      <div class="sectors-container">
-        <div class="sector">
-          <div class="circle"></div>
-          <div class="image"></div>
-          <div class="sector-details">
-            <div class="sector-name">Aeronautics Systems</div>
-            <div class="sector-leader">Tom Jones, President</div>
-          </div>
-        </div>
-        <div class="sector">
-          <div class="circle"></div>
-          <div class="image"></div>
-          <div class="sector-details">
-            <div class="sector-name">Defense Systems</div>
-            <div class="sector-leader">Roshan Roeder, President</div>
-          </div>
-        </div>
-        <div class="sector">
-          <div class="circle"></div>
-          <div class="image"></div>
-          <div class="sector-details">
-            <div class="sector-name">Mission Systems</div>
-            <div class="sector-leader">Mark Caylor, President</div>
-          </div>
-        </div>
-        <div class="sector">
-          <div class="circle"></div>
-          <div class="image"></div>
-          <div class="sector-details">
-            <div class="sector-name">Space Systems</div>
-            <div class="sector-leader">Tom Wilson, President</div>
-          </div>
-        </div>
-      </div>
-  </div>
     </section>
 
 
