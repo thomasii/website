@@ -1,474 +1,423 @@
-    /* Style for sections */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-    section {
-      background-color: #f0f0f0;
-      background-image: linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent), linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent);
-      background-size: 100% 100%;
-      background-position: top left;
+section {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent),
+    linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent);
+  background-size: 100% 100%;
+  background-position: top left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
 
-    }
-    
-    @keyframes background-animation {
-      0% {
-        background-position: top left, center;
-      }
-      100% {
-        background-position: bottom right, center;
-      }
-    }
-    
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      padding-top: 2rem;
-    }
-    
-    .title-container {
-      position: relative;
-      top: 1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 10px 20px;
-      border-radius: 10px;
-      max-width: 80%;
-      text-align: center;
-    }
-    
-    .title {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #ffffff;
-      margin: 0;
-      text-align: center;
-      
-       /* Glowing effect */
-       text-shadow: 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #030303;
-    }
-    
-    .section1 {
-      background-color: #f0f0f0;
-    }
-    
-    .images-container, .images-placeholder {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .values-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 100%;
-    }
-    
-    .value {
-      font-size: 1.2rem;
-      color: #4b4b4b;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.7);
-      border-radius: 10px;
-      flex-basis: 45%; /* This will ensure that no more than 2 values are on one line */
-      margin: 10px;
-    }
-    
-    .section1 {
-      background-color: #f0f0f0;
-    }
-    
-    .section2 {
-      background-color: #d0d0d0;
-    }
-    
-    
-    .subsection-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .text-container {
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      width: 100%;
-    }
-    
-    .section-header, .subheader {
-      font-family: 'Roboto', sans-serif;
-      
-    }
+@keyframes background-animation {
+  0% {
+    background-position: top left, center;
+  }
+  100% {
+    background-position: bottom right, center;
+  }
+}
 
-    .section-content {
-      font-family: 'Roboto', sans-serif;
-      margin-top: 5%;
-    }
-    
-    .section-header-container {
-      width: 80%;
-      background-color: rgb(0,36,156);
-      border-radius: 10px;
-      padding-top: 0%;
-      padding-bottom: 0%;
-      margin-bottom: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    
-    .forward-mark {
-      width: 5%;
-      height : 5%;
-      float: right;
-      display:inline-block;
-    }
-    
-    .section-header-container
-    {
-      width: 100%; /* Take up the full width */
-      display: flex; /* This makes the text and images appear on the same line */
-      align-items: flex-start; /* This makes the text and images align to the top */
-      justify-content: space-between; /* This adds some space between the text and images */
-      gap: 20px; /* This adds some space between the text and images */
-    }
+.title-container {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
 
-    .section-header-text {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-align: left; /* Center the text */
-      width: 100%; /* Take up the full width */
-      
-    }
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #030303; /* Glowing effect */
+}
 
-    .sub-section-corp-2
-    {
-      width: 100%; /* Take up the full width */
-      display: flex; /* This makes the text and images appear on the same line */
-      align-items: flex-start; /* This makes the text and images align to the top */
-      justify-content: space-between; /* This adds some space between the text and images */
-      gap: 20px; /* This adds some space between the text and images */
-      margin-top: 3%;
-    }
+.section1 {
+  background-color: #f0f0f0;
+}
 
-    .sub-section-corp-3 {
-      width: 100%; /* Take up the full width */
-      margin-top: 3%;
+.images-container,
+.images-placeholder {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
 
-    }
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
 
-    .sub-section-corp {
-      margin-left:10%;
-      margin-top:2%;
-      margin-right:10%;
-    }
+.value {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  flex-basis: 45%; /* This will ensure that no more than 2 values are on one line */
+  margin: 10px;
+}
 
+.section2 {
+  background-color: #d0d0d0;
+}
 
-    .sub-section-values {
-      margin-left:10%;
-      margin-top:2%;
-      margin-right:10%;
-    }
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
+.text-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+}
 
-    .section-header {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-align: left; /* Center the text */
-      width: 100%; /* Take up the full width */
-      
-    }
-    
-    .subsection-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the children */
-      width: 80%;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .subheader {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #4b4b4b;
-      margin-bottom: 1rem;
-    }
-    
-    .section-content {
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    
-       /* Glowing effect */
-       text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303;
-    }
-    
-    .section-button {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #ffffff;
-      background-color: #007bff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      text-transform: uppercase;
-      margin-top: 1rem;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    
-    .section-button:hover {
-      background-color: #0056b3;
-      color: #ffffff;
-    }
-    
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    
-    .intro-container {
-        display: flex; /* This makes the text and images appear on the same line */
-        align-items: flex-start; /* This makes the text and images align to the top */
-        justify-content: space-between; /* This adds some space between the text and images */
-        gap: 20px; /* This adds some space between the text and images */
-    }
+.section-header,
+.subheader {
+  font-family: 'Roboto', sans-serif;
+}
 
-    
-    figure {
-      margin: 0;
-    }
-    
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    
-    figcaption {
-      text-align: center;
-    }
-    
-    .org-structure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .org-structure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .org-title {
-      /* Existing styles */
-      color: #ffffff;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 0;
-      text-align: left;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-right: 35rem;
-      position: relative;
-      z-index: 2; /* Add this line to ensure the text appears above the circle */
-    }
-    
-    .rectangle {
-      display: flex;
-      align-items: center;
-      background-color: #000000;
-      padding: 1.5rem;
-      position: relative; 
-      padding: 3rem 8rem 3rem 3rem;
-          }
-    
-    .company-link {
-      color: #007bff;
-      text-decoration: none;
-      border-bottom: none;
-      transition: color 0.3s;
-    }
-    
-    .company-link:hover {
-      color: #0056b3;
-    }
-    
-    
-    .circle {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* Existing styles */
-      position: absolute;
-      top: -50px; /* Adjust the top position as needed */
-      left: calc(50% - 0px);
-      transform: translateX(-50%);
-      z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
-    }
-    
-    .circle2 {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* Existing styles */
-      position: absolute;
-      left: calc(35%);
-      transform: translateX(-50%);
-      z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
-    }
-    
-    .circle-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background-color: #ffffff;
-    }
-    
-    .leader-details {
-      text-align: left;
-      color: #ffffff;
-      position: relative;
-      z-index: 2;
-      flex: 1;
-      margin-left: 2rem;
-    }
-    
-    .leader-name {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    
-    .leader-role {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .leader-position {
-      font-size: 1rem;
-    }
-    
-    .sectors-container {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
-      background-color: #f5f5f5; /* Feather gray background */
-      padding: 20px;
-      display: flex; /* Change grid to flex to remove the grid layout */
-      justify-content: space-around; /* Add space between sectors */
-    }
-    
-    .sector {
-      background-color: #dcdcdc; /* Light gray background */
-      padding: 20px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      width:calc(25% - 1.5 rem);
-      margin-bottom: 10%;
-      /* Existing styles */
-      position: relative; /* Add this line to make the sector a positioned container */
-      padding: 3rem;
-    }
-    
-    .sector-details {
-      margin-left: 20rem;
-      position: relative;
-      width:calc(25% - 1.5 rem);
-      margin-bottom: 140%;
-      z-index: 2;
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    
-    .sector-name {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #4b4b4b;
-    }
-    
-    .sector-leader {
-      font-size: 1rem;
-      color: #4b4b4b;
-    }
-    
-    
-    .values-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 100px;
-    }
-    
-    .value-card {
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .value-description {
-      font-size: 2rem;
-      color: #ffffff;
-      text-align: left;
-      text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303;
-    }
-    
-    .value-image {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    
-    .value-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 0px;
-    }
-    
-    
-    [data-aos="fade-left"] {
-      padding-left: 0;
-      transition-duration: 1.3s;
-      align-self: flex-start;
-    }
-    
-    [data-aos="fade-right"] {
-      padding-right: 0;
-      transition-duration: 1.3s;
-      align-self: flex-start;
-    }
+.section-content {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5%;
+}
+
+.section-header-container {
+  width: 100%; /* Take up the full width */
+  background-color: rgb(0,36,156);
+  display: flex; /* This makes the text and images appear on the same line */
+  align-items: flex-start; /* This makes the text and images align to the top */
+  justify-content: space-between; /* This adds some space between the text and images */
+  gap: 20px; /* This adds some space between the text and images */
+}
+
+.forward-mark {
+  width: 5%;
+  height: 5%;
+  float: right;
+  display: inline-block;
+}
+
+.section-header-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: left; /* Center the text */
+  width: 100%; /* Take up the full width */
+}
+
+.sub-section-corp-2 {
+  width: 100%; /* Take up the full width */
+  display: flex; /* This makes the text and images appear on the same line */
+  align-items: flex-start; /* This makes the text and images align to the top */
+  justify-content: space-between; /* This adds some space between the text and images */
+  gap: 20px; /* This adds some space between the text and images */
+  margin-top: 3%;
+}
+
+.sub-section-corp-3 {
+  width: 100%; /* Take up the full width */
+  margin-top: 3%;
+}
+
+.sub-section-corp {
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-right: 10%;
+}
+
+.sub-section-values {
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-right: 10%;
+}
+
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the children */
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303; /* Glowing effect */
+}
+
+.section-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.intro-container {
+  display: flex; /* This makes the text and images appear on the same line */
+  align-items: flex-start; /* This makes the text and images align to the top */
+  justify-content: space-between; /* This adds some space between the text and images */
+  gap: 20px; /* This adds some space between the text and images */
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.org-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.org-title {
+  /* Existing styles */
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 35rem;
+  position: relative;
+  z-index: 2; /* Add this line to ensure the text appears above the circle */
+}
+
+.rectangle {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 1.5rem;
+  position: relative;
+  padding: 3rem 8rem 3rem 3rem;
+}
+
+.company-link {
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.3s;
+}
+
+.company-link:hover {
+  color: #0056b3;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Existing styles */
+  position: absolute;
+  top: -50px; /* Adjust the top position as needed */
+  left: calc(50% - 0px);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Existing styles */
+  position: absolute;
+  left: calc(35%);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
+}
+
+.circle-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.leader-details {
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.leader-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.leader-role {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.leader-position {
+  font-size: 1rem;
+}
+
+.sectors-container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #f5f5f5; /* Feather gray background */
+  padding: 20px;
+  display: flex; /* Change grid to flex to remove the grid layout */
+  justify-content: space-around; /* Add space between sectors */
+}
+
+.sector {
+  background-color: #dcdcdc; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: calc(25% - 1.5rem);
+  margin-bottom: 10%;
+  /* Existing styles */
+  position: relative; /* Add this line to make the sector a positioned container */
+  padding: 3rem;
+}
+
+.sector-details {
+  margin-left: 20rem;
+  position: relative;
+  width: calc(25% - 1.5rem);
+  margin-bottom: 140%;
+  z-index: 2;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.sector-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.sector-leader {
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.value-card {
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.value-description {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303;
+}
+
+.value-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.value-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0px;
+}
+
+[data-aos="fade-left"] {
+  padding-left: 0;
+  transition-duration: 1.3s;
+  align-self: flex-start;
+}
+
+[data-aos="fade-right"] {
+  padding-right: 0;
+  transition-duration: 1.3s;
+  align-self: flex-start;
+}
