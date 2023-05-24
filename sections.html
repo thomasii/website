@@ -5,105 +5,114 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Northrop Grumman Today</title>
       <link rel="stylesheet" href="/css/sections.css">
-      <!-- Assuming your CSS is in this file -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS Library -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-      <!-- AOS Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> <!-- AOS Stylesheet -->
+      <style>
+         .sub-section-collapsed {
+            display: none;
+         }
+      </style>
    </head>
    <body>
-      <section class="section1">
-        <div class="sub-section-corp">
-          <h1 class="section-header-text">  Northrop Grumman Today</h1>
-          <BR> 
-          <BR>
+    <section class="section1">
+      <div class="sub-section-corp">
+         <h1 class="section-header-text">Northrop Grumman Today</h1>
+         <br>
+         <br>
 
-          <div class="section-header-container" data-aos="zoom-in">
-              <h1 class="section-header-text">Our Company</h1>
-              <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
-          </div>
+         <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Company</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+         </div>
 
-          <div class="sub-section-corp-2" data-aos="zoom-in">
-          <h1 class="title">Welcome to <a href="https://ngc.sharepoint.us/sites/NGC/" target="_blank" class="company-link">Northrop Grumman</a>  
-              Where we are <a href="https://www.northropgrumman.com/who-we-are/defining-possible-innovation-and-advanced-technology/" target="_blank" class="company-link">Defining Possible</a>
-          </h1>
-          </div>
+         <!-- Collapsible content -->
+         <div class="collapsible-content">
+            <div class="sub-section-corp-2" data-aos="zoom-in">
+               <h1 class="title">Welcome to <a href="https://ngc.sharepoint.us/sites/NGC/" target="_blank" class="company-link">Northrop Grumman</a>
+                  Where we are <a href="https://www.northropgrumman.com/who-we-are/defining-possible-innovation-and-advanced-technology/" target="_blank" class="company-link">Defining Possible</a>
+               </h1>
+            </div>
 
-          <div class="sub-section-corp-2" data-aos="zoom-in">
-              <p class="section-content">Welcome to one of the leading space, aeronautic, cyber and defense producers in the world!</p>
-              <div class="images-container">
+            <div class="sub-section-corp-2" data-aos="zoom-in">
+               <p class="section-content">Welcome to one of the leading space, aeronautic, cyber and defense producers in the world!</p>
+               <div class="images-container">
                   <img src="./css/intropics.png" alt="alt text 1">
-              </div>
-          </div>
+               </div>
+            </div>
 
-          <div class="sub-section-corp-2" data-aos="zoom-in">
-              <div class="intro-map">
+            <div class="sub-section-corp-2" data-aos="zoom-in">
+               <div class="intro-map">
                   <img src="./css/mappart2.PNG" alt="alt text 1" data-aos="fade-left">
-              </div>
-          </div>
-        </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-        <div class="sub-section-values">
-
-          <div class="section-header-container" data-aos="zoom-in">
+      <div class="sub-section-values">
+         <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
             <h1 class="section-header-text">Our Values</h1>
             <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
-          </div>
+         </div>
 
-          <h1 class="title"><a href="https://ngc.sharepoint.us/sites/NGC/Pages/OurValues.aspx" target="_blank" class="company-link">Our Values</a> support
-            our ability to deliver on our shared purpose 
-          </h1>
+         <!-- Collapsible content -->
+         <div class="collapsible-content">
+            <h1 class="title"><a href="https://ngc.sharepoint.us/sites/NGC/Pages/OurValues.aspx" target="_blank" class="company-link">Our Values</a> support
+               our ability to deliver on our shared purpose
+            </h1>
 
-          <div class="values-container">
-             <div class="value-card" data-aos="fade-right">
-                <div class="value-image">
-                   <img src="./css/right.png" alt="Value 1" />
-                   <div class="backup-image"></div>
-                </div>
-                <div class="value-description">
-                   We earn trust, act with ethics, integrity and transparency, <br>
-                   treat everyone with respect, value diversity and foster safe and <br>
-                   inclusive environments.
-                </div>
-             </div>
-             <div class="value-card" data-aos="fade-left">
-                <div class="value-image">
-                   <img src="./css/promise.png" alt="Value 2" />
-                   <div class="backup-image"></div>
-                </div>
-                <div class="value-description">
-                   We own the delivery of results, focused on quality outcomes.
-                </div>
-             </div>
-             <div class="value-card" data-aos="fade-right">
-                <div class="value-image">
-                   <img src="./css/shared.png" alt="Value 3" />
-                   <div class="backup-image"></div>
-                </div>
-                <div class="value-description">
-                   We work together to focus on the mission and <br> take accountability for 
-                   the sustainable success for our people, <br> customers, shareholders, suppliers and communities.
-                </div>
-             </div>
-             <div class="value-card" data-aos="fade-left">
-                <div class="value-image">
-                   <img src="./css/pioneer.png" alt="Value 4" />
-                   <div class="backup-image"></div>
-                </div>
-                <div class="value-description">
-                   We pioneer with fierce curiosity, dedication and innovation, <br>
-                   we seek to solve the world’s most challenging problems.
-                </div>
-             </div>
-          </div>
+            <div class="values-container">
+               <div class="value-card" data-aos="fade-right">
+                  <div class="value-image">
+                     <img src="./css/right.png" alt="Value 1" />
+                     <div class="backup-image"></div>
+                  </div>
+                  <div class="value-description">
+                     We earn trust, act with ethics, integrity and transparency, <br>
+                     treat everyone with respect, value diversity and foster safe and <br>
+                     inclusive environments.
+                  </div>
+               </div>
+               <div class="value-card" data-aos="fade-left">
+                  <div class="value-image">
+                     <img src="./css/promise.png" alt="Value 2" />
+                     <div class="backup-image"></div>
+                  </div>
+                  <div class="value-description">
+                     We own the delivery of results, focused on quality outcomes.
+                  </div>
+               </div>
+               <div class="value-card" data-aos="fade-right">
+                  <div class="value-image">
+                     <img src="./css/shared.png" alt="Value 3" />
+                     <div class="backup-image"></div>
+                  </div>
+                  <div class="value-description">
+                     We work together to focus on the mission and <br> take accountability for
+                     the sustainable success for our people, <br> customers, shareholders, suppliers and communities.
+                  </div>
+               </div>
+               <div class="value-card" data-aos="fade-left">
+                  <div class="value-image">
+                     <img src="./css/pioneer.png" alt="Value 4" />
+                     <div class="backup-image"></div>
+                  </div>
+                  <div class="value-description">
+                     We pioneer with fierce curiosity, dedication and innovation, <br>
+                     we seek to solve the world’s most challenging problems.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
+      <div class="sub-section-corp">
+        <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+          <h1 class="section-header-text">Our Orginization</h1>
+          <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
         </div>
 
-        <div class="values-container" data-aos="zoom-in">
-          <div class="section-header-container" data-aos="zoom-in">
-            <h1 class="section-header">Our Organization</h1>
-            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
-            </div>
-            
+         <!-- Collapsible content -->
+         <div class="collapsible-content">
             <div class="section-content">Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a>
                and <a href="#" class="company-link">Board of Directors</a>
             </div>
@@ -121,32 +130,44 @@
             </div>
             <div class="sectors-container">
                <div class="sector">
-                  <div class="circle"></div>
-                  <div class="image"></div>
+                  <div class="circle">
+                     <div class="circle-image">
+                        <img src="image-url-1" alt="Sector 1 Image">
+                     </div>
+                  </div>
                   <div class="sector-details">
                      <div class="sector-name">Aeronautics Systems</div>
                      <div class="sector-leader">Tom Jones, President</div>
                   </div>
                </div>
                <div class="sector">
-                  <div class="circle"></div>
-                  <div class="image"></div>
+                  <div class="circle">
+                     <div class="circle-image">
+                        <img src="image-url-2" alt="Sector 2 Image">
+                     </div>
+                  </div>
                   <div class="sector-details">
                      <div class="sector-name">Defense Systems</div>
                      <div class="sector-leader">Roshan Roeder, President</div>
                   </div>
                </div>
                <div class="sector">
-                  <div class="circle"></div>
-                  <div class="image"></div>
+                  <div class="circle">
+                     <div class="circle-image">
+                        <img src="image-url-3" alt="Sector 3 Image">
+                     </div>
+                  </div>
                   <div class="sector-details">
                      <div class="sector-name">Mission Systems</div>
                      <div class="sector-leader">Mark Caylor, President</div>
                   </div>
                </div>
                <div class="sector">
-                  <div class="circle"></div>
-                  <div class="image"></div>
+                  <div class="circle">
+                     <div class="circle-image">
+                        <img src="image-url-4" alt="Sector 4 Image">
+                     </div>
+                  </div>
                   <div class="sector-details">
                      <div class="sector-name">Space Systems</div>
                      <div class="sector-leader">Tom Wilson, President</div>
@@ -154,9 +175,140 @@
                </div>
             </div>
          </div>
+      </div>
+   </section>
+
+      <section class="section section2">
+        <!-- Xetron Intro Section -->
+      
+        <!-- Our Site -->
+        <div class="sub-section-corp">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Site</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+          <div class="sub-section-site-1" data-aos="zoom-in">
+            <p>Welcome to <a href="#" class="company-link">Xetron</a>, where we have been...</p>
+            <ul class="bulleted-list">
+              <li>Random string 1</li>
+              <li>Random string 2</li>
+              <li>Random string 3</li>
+              <li>Random string 4</li>
+            </ul>
+            <!-- Map -->
+            <div id="map" data-aos="fade-left">
+              <!-- Use a map service like Google Maps or OpenStreetMaps to embed a map. -->
+            </div>
+          </div>
+        </div>
+      
+        <!-- Our Culture -->
+        <div class="sub-section-culture">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Culture</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+          <p>...</p> <!-- Add the paragraph with hyperlinks -->
+          <div class="images-container" data-aos="fade-left">
+            <!-- Add the photos -->
+          </div>
+        </div>
+      
+        <!-- Our Executive Leadership -->
+        <div class="sub-section-leadership">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Executive Leadership</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+        </div>
+      
+        <!-- Our Organizational Structure -->
+        <div class="sub-section-structure">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Sections Structure</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+        </div>
+      
+        <!-- Our Technology -->
+        <div class="sub-section-tech">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Technology</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+          <p>Our <b>Products</b> are developed using...</p>
+          <div class="tech-sub-section">
+            <div class="hardware-focus">
+              <img src="" alt="Hardware Image"> <!-- Add hardware image source -->
+              <ul>
+                <!-- Add hardware bullet points -->
+              </ul>
+            </div>
+            <div class="software-focus">
+              <img src="" alt="Software Image"> <!-- Add software image source -->
+              <ul>
+                <!-- Add software bullet points -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Our Programs -->
+        <div class="sub-section-programs">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Programs</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+          <div class="badge-collection">
+            <!-- Add the badge images -->
+          </div>
+        </div>
       </section>
    </body>
    <script>
-      AOS.init();
-   </script>
+    AOS.init();
+ 
+    // Function to handle the click event on section-header-container
+    function toggleSubSection(element) {
+       const collapsibleContent = element.nextElementSibling;
+       collapsibleContent.classList.toggle("sub-section-collapsed");
+ 
+       // Reinitialize or refresh AOS for the expanded or collapsed content
+       if (collapsibleContent.classList.contains("sub-section-collapsed")) {
+          AOS.refresh();
+       } else {
+          AOS.init({
+             once: true,
+             duration: 1000,
+          });
+       }
+    }
+ 
+    // Attach event listener to all section-header-containers
+    const sectionHeaderContainers = document.querySelectorAll(".section-header-text");
+    sectionHeaderContainers.forEach((container) => {
+       container.addEventListener("click", function (event) {
+          const sectionHeader = event.target;
+          const collapsibleContent = sectionHeader.nextElementSibling;
+          collapsibleContent.classList.toggle("sub-section-collapsed");
+ 
+          // Collapse all child elements until the next sub-section
+          let nextElement = collapsibleContent.nextElementSibling;
+          while (nextElement && !nextElement.classList.contains("section-header-text")) {
+             nextElement.classList.toggle("sub-section-collapsed");
+             nextElement = nextElement.nextElementSibling;
+          }
+ 
+          // Reinitialize or refresh AOS for the expanded or collapsed content
+          if (collapsibleContent.classList.contains("sub-section-collapsed")) {
+             AOS.refresh();
+          } else {
+             AOS.init({
+                once: true,
+                duration: 1000,
+             });
+          }
+       });
+    });
+ </script>
 </html>
