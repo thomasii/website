@@ -508,3 +508,98 @@ img {
   display: none;
 }
 
+
+.exec-rectangle {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.exec-sector {
+  font-size: 1.5rem;
+}
+
+.exec-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.exec-circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exec-leader-details {
+  display: flex;
+  align-items: center;
+}
+
+.exec-leader-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.exec-leader-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exec-text-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.exec-sector-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.exec-sector-leader {
+  font-size: 1rem;
+}
+
+.exec-sector-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  max-width: 45%;
+  flex-basis: 45%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.exec-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* adjust as needed */
+}
+
+.row1 {
+  background-color: #000000; /* replace with your color */
+}
+
+.row2 {
+  background-color: #4b4b4b; /* replace with your color */
+}
+
+.row3 {
+  background-color: #636363; /* replace with your color */
+}
+
