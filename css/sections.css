@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 section {
   background-color: #f0f0f0;
-  background-image: linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent),
-    linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent);
+
   background-size: 100% 100%;
   background-position: top left;
   display: flex;
@@ -13,6 +13,8 @@ section {
   width: 100%;
   padding-top: 2rem;
 }
+
+
 
 @keyframes background-animation {
   0% {
@@ -36,13 +38,13 @@ section {
 }
 
 .title {
-  font-family: 'Roboto', sans-serif;
+  font-family: serif;
   font-size: 2.5rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0;
   text-align: center;
-  text-shadow: 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #030303; /* Glowing effect */
+  text-shadow: 0 0 5px #000000, 0 0 5px #000000;
 }
 
 .section1 {
@@ -77,7 +79,7 @@ section {
 }
 
 .section2 {
-  background-color: #636363;
+  background-color: #f0f0f0;
 }
 
 .subsection-container {
@@ -99,11 +101,11 @@ section {
 
 .section-header,
 .subheader {
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
 }
 
 .section-content {
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   margin-top: 5%;
 }
 
@@ -123,8 +125,9 @@ section {
   display: inline-block;
 }
 
-.section-header-text {
-  font-size: 3rem;
+ .sub-section-header-text{
+  font-family: Sans-Serif;
+  font-size: 5rem;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 1.5rem;
@@ -132,6 +135,34 @@ section {
   border-radius: 10px;
   text-align: left; /* Center the text */
   width: 100%; /* Take up the full width */
+
+}
+
+.sub-section-title {
+font-family: Serif;
+font-size: 4rem;
+color: #000000;
+margin-top: 2%;
+text-align: center;
+}
+
+.section-header-text {
+  font-size: 7rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center; /* Center the text */
+  width: 100%; /* Take up the full width */
+  background-color: #000000;
+  
+}
+
+.sub-section-corp-1 {
+  width: 100%; /* Take up the full width */
+  text-align: center; /* Center the text */
+  margin-top: 2%;
 }
 
 .sub-section-corp-2 {
@@ -179,11 +210,11 @@ section {
 }
 
 .section-content {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
+  font-family: serif;
+  font-size: 3rem;
+  color: #000000;
   line-height: 1.6;
-  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303; /* Glowing effect */
+  max-width: 30%;
 }
 
 .section-button {
@@ -264,14 +295,14 @@ figcaption {
 }
 
 .company-link {
-  color: #007bff;
+  color: rgb(0,36,156);
   text-decoration: none;
   border-bottom: none;
   transition: color 0.3s;
 }
 
 .company-link:hover {
-  color: #0056b3;
+  color: rgb(30,55,101);
 }
 
 .circle {
@@ -334,7 +365,7 @@ figcaption {
   max-width: 300px; /* Adjust the max-width as needed */
   padding: 20px;
   border-radius: 10px;
-  background-color: #dcdcdc;
+  background-color: #5A635F;
   display: flex;
   align-items: center;
   margin-bottom: 20px; /* Adjust the margin as needed */
@@ -347,12 +378,12 @@ figcaption {
 .sector-name {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #4b4b4b;
+  color: #000000;
 }
 
 .sector-leader {
   font-size: 1rem;
-  color: #4b4b4b;
+  color: #000000;
 }
 
 .values-container {
@@ -369,10 +400,11 @@ figcaption {
 }
 
 .value-description {
+  font-family: serif;
   font-size: 2rem;
-  color: #ffffff;
+  font-weight: bold;
+  color: #000000;
   text-align: left;
-  text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 10px #030303;
 }
 
 .value-image {
