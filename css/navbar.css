@@ -2,8 +2,6 @@
   --navLeft-bg-color: #333;
   --navLeft-link-color: #fff;
   --navLeft-link-hover-color: #007bff;
-  --scrollbar-bg-color: #999;
-  --scrollbar-thumb-color: #666;
 }
 
 .navLeft {
@@ -13,7 +11,7 @@
   width: 80px;
   height: 100%;
   background-color: var(--navLeft-bg-color);
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 10px 0;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -32,25 +30,25 @@
   height: 80px;
   text-decoration: none;
   color: var(--navLeft-link-color);
-  font-size: 1.8rem; /* Increased icon size */
+  font-size: 1.8rem;
   transition: color 0.3s, transform 0.3s;
 }
 
 .navLeft a span {
-  font-size: 1rem; /* Increased font size */
+  font-size: 1rem;
   margin-top: 5px;
   display: none;
   transition: opacity 0.3s;
-  line-height: 1.2; /* Adjusted line-height */
-  padding: 0 5px; /* Added padding */
+  line-height: 1.2;
+  padding: 0 5px;
 }
 
-.navLeft a:hover {
+.navLeft a:hover, .navLeft a:focus {
   color: var(--navLeft-link-hover-color);
   transform: scale(1.2);
 }
 
-.navLeft a:hover span {
+.navLeft a:hover span, .navLeft a:focus span {
   display: block;
   opacity: 1;
 }
