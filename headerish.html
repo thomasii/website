@@ -1,0 +1,595 @@
+<main>
+<Style>
+    /* Style for sections */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+section {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent), linear-gradient(45deg, #0f1791 50%, transparent 50%, transparent);
+  background-size: 200% 200%;
+  background-position: top left, center;
+  animation: background-animation 8s linear infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: top left, center;
+  }
+  100% {
+    background-position: bottom right, center;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.title-container {
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+
+   /* Glowing effect */
+   text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #030303;
+}
+
+.section1 {
+  background-color: #f0f0f0;
+}
+
+.images-container, .images-placeholder {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.value {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  flex-basis: 45%; /* This will ensure that no more than 2 values are on one line */
+  margin: 10px;
+}
+
+.section1 {
+  background-color: #f0f0f0;
+}
+
+.section2 {
+  background-color: #d0d0d0;
+}
+
+
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.text-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-header, .subheader, .section-content {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-header-container {
+  width: 80%;
+  background-color: navy;
+  border-radius: 10px;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-header-container::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 10%;
+  height: 80%;
+  padding-bottom: 0%;
+  background-color: white;
+  z-index: 1;
+}
+
+.section-header-container::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 5.5%;
+  width: 10%;
+  height: 70%;
+  background-color: navy;
+  z-index: 2;
+}
+
+.section-header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: left; /* Center the text */
+  width: 100%; /* Take up the full width */
+}
+
+.subsection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the children */
+  width: 80%;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+
+   /* Glowing effect */
+   text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #030303;
+}
+
+.section-button {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.intro-container {
+    display: flex; /* This makes the text and images appear on the same line */
+    align-items: flex-start; /* This makes the text and images align to the top */
+    justify-content: space-between; /* This adds some space between the text and images */
+    gap: 20px; /* This adds some space between the text and images */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.org-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.org-structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.org-title {
+  /* Existing styles */
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 35rem;
+  position: relative;
+  z-index: 2; /* Add this line to ensure the text appears above the circle */
+}
+
+.rectangle {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 1.5rem;
+  position: relative; 
+  padding: 3rem 8rem 3rem 3rem;
+  border-radius: 
+}
+
+.company-link {
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.3s;
+}
+
+.company-link:hover {
+  color: #0056b3;
+}
+
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Existing styles */
+  position: absolute;
+  top: -50px; /* Adjust the top position as needed */
+  left: calc(50% - 0px);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
+}
+
+.circle2 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Existing styles */
+  position: absolute;
+  left: calc(35%);
+  transform: translateX(-50%);
+  z-index: 1; /* Add this line to ensure the circle appears above the rectangle */
+}
+
+.circle-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.leader-details {
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.leader-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.leader-role {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.leader-position {
+  font-size: 1rem;
+}
+
+.sectors-container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #f5f5f5; /* Feather gray background */
+  padding: 20px;
+  display: flex; /* Change grid to flex to remove the grid layout */
+  justify-content: space-around; /* Add space between sectors */
+}
+
+.sector {
+  background-color: #dcdcdc; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  /* Existing styles */
+  position: relative; /* Add this line to make the sector a positioned container */
+  padding: 3rem;
+}
+
+.sector-details {
+  margin-left: 20rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.sector-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.sector-leader {
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.value-description {
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
+}
+
+.value-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.value-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+[data-aos="fade-left"] {
+  padding-left: 0;
+  transition-duration: 1.3s;
+  align-self: flex-end;
+}
+
+[data-aos="fade-right"] {
+  padding-right: 0;
+  transition-duration: 1.3s;
+  align-self: flex-start;
+}
+</Style>
+<body>
+    <section class="section1">
+        <div class="section-header-container">
+            <h1 class="section-header">Our Company</h1>
+        </div>
+        <h1 class="title">Welcome to <a href="https://example.com" target="_blank" class="company-link">Northrop Grumman</a>  
+            <br> Where we are <a href="https://example.com" target="_blank" class="company-link">Defining Possible</a></h1>
+        <div class="subsection-container" data-aos="fade-left">
+            <div class="intro-container">
+                <p class="section-content">Welcome to one of the leading space, aeronautic, cyber and defense producers in the world!</p>
+                <div class="images-container">
+                    <div class="grid">
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 1">
+                            <figcaption>Caption 1</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 2">
+                            <figcaption>Caption 2</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 3">
+                            <figcaption>Caption 3</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://free-images.com/lg/e77c/star_clusters_globular_cluster_0.jpg" alt="alt text 4">
+                            <figcaption>Caption 4</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-header-container">
+            <h1 class="section-header">Our Values</h1>
+          </div>
+          <div class="section-content">
+            <h2 class="title">Our Values</h2>
+            <p>Supporting our ability to deliver on our mission and vision, our values reaffirm what is important to us as an organization.</p>
+          </div>
+          <div class="values-container">
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value1.jpg" alt="Value 1" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We do the right thing</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We do the right thing in more detail...</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value2.jpg" alt="Value 2" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We do what we promise</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We do what we promise in more detail...</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value3.jpg" alt="Value 3" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We commit to shared success</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We commit to shared success in more detail...</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-image">
+                <img src="value4.jpg" alt="Value 4" />
+                <div class="backup-image"></div>
+              </div>
+              <h3 class="value-title">We pioneer</h3>
+              <div class="value-description">
+                <p class="glow-text">Figure text explaining We pioneer in more detail...</p>
+              </div>
+            </div>
+          </div>
+          <div class="values-container">
+            <div class="section-header-container">
+              <h1 class="section-header">Our Organization</h1>
+            </div>
+            <div class="section-content">
+              Understand our organization structure and meet the <a href="#" class="company-link">Leadership Team</a> and <a href="#" class="company-link">Board of Directors</a>
+            </div>
+            <div class="org-structure">
+              <div class="rectangle">
+                <h2 class="org-title">Northrop Grumman Corporate</h2>
+                <div class="circle"></div>
+                <div class="image"></div>
+                <div class="leader-details">
+                  <div class="leader-name">Kathy Wardern</div>
+                  <div class="leader-role">Chair</div>
+                  <div class="leader-position">CEO and President</div>
+                </div>
+              </div>
+            </div>
+            <h1 class="section-header">Sectors</h1>
+            <div class="sectors-container">
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Aeronautics Systems</a>
+                  <div class="sector-leader">Tom Jones, President</div>
+                  <div class="additional-info">
+                    Additional information about Aeronautics Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Defense Systems</a>
+                  <div class="sector-leader">Roshan Roeder, President</div>
+                  <div class="additional-info">
+                    Additional information about Defense Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Mission Systems</a>
+                  <div class="sector-leader">Mark Caylor, President</div>
+                  <div class="additional-info">
+                    Additional information about Mission Systems
+                  </div>
+                </div>
+              </div>
+              <div class="sector">
+                <div class="circle2"></div>
+                <div class="image"></div>
+                <div class="sector-details">
+                  <a href="#" class="sector-name-link">Space Systems</a>
+                  <div class="sector-leader">Tom Wilson, President</div>
+                  <div class="additional-info">
+                    Additional information about Space Systems
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+</body>
+<script>
+    AOS.init();
+</script>
+</main>
