@@ -770,84 +770,39 @@ img {
     left: 0;
 }
 
-.timeline-block:hover {
-  transform: scale(1.05);  /* Increase size by 5% when hovered */
-  width: 75%;
-  transition: transform .2s; /* Add a transition effect */
-  z-index: 2; /* To avoid other elements from overlapping */
-}
-
-* Styles for the last block */
+/* Styles for the last block */
 .last-block:before {
     height: 100%; /* Reset the line height for the last block */
 }
 
-.box-container-title {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 3%;
-}
 
-.box-link {
-  color: #474747;
-  text-decoration: none;
-  border-bottom: none;
-  transition: color 0.3s;
-}
-
-.box-link i {
-  transition: transform 0.3s ease-in-out;
-}
-
-.box-link:hover {
-  color: #000203;
-}
-
-.box-link:hover i {
-  transform: rotate(180deg);
-}
-
+/* Box container settings */
 .box-container {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+    width: 70%;
+    margin-left:15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem; /* or any space you want between boxes */
 }
 
+/* Individual box settings */
 .box {
-  flex: 0 0 calc(50% - 1rem);
-  height: 150px;
-  background-color: #ccc;
+  flex: 0 0 calc(50% - 1rem); /* This accounts for the gap between the boxes */
+  height: 150px; /* or any height you want */
+  background-color: #ccc; /* or any color you want */
   text-align: left;
   transition: transform 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  text-decoration: none;
-  color: black;
-}
-/* Individual box settings */
-.box {
-    flex: 0 0 calc(50% - 1rem); /* This accounts for the gap between the boxes */
-    height: 150px; /* or any height you want */
-    background-color: #ccc; /* or any color you want */
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none; /* removes the underline from the hyperlink */
-    color: black; /* changes the hyperlink color to black */
+  text-decoration: none; /* removes the underline from the hyperlink */
+  color: black; /* changes the hyperlink color to black */
 }
 
 .box p {
-    margin: 10px;
-    font-size: 3rem; /* sets the font size to 3rem */
+  margin: 10px;
+  font-size: 3rem; /* sets the font size to 3rem */
 }
-
 .box:before {
     content: "";
     position: absolute;

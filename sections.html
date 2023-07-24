@@ -382,24 +382,28 @@
    <!-- Additional rectangles could be added by duplicating the "structure-rectangle" div and changing the class "row1" to "row2", "row3", etc., as per your CSS styling. -->
  </div>
       
-<!-- Our Technology -->
-<div class="sub-section-tech">
-   <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
-       <h1 class="section-header-text">Our Technology</h1>
-       <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
-   </div>
-   <div class="collapsible-content">
-      <div class="box-container-title">
-         <h1 class="title"><a href="#" class="box-link">Experience <i class="fa-solid fa-arrow-up"></i></a></h1>
-     </div>
-     <div class="box-container">
-         <a href="#" class="box"><p>On the job learning</p></a>
-         <a href="#" class="box"><p>Job rotations</p></a>
-         <a href="#" class="box"><p>Stretch Assignments<br>Special Projects</p></a>
-         <a href="#" class="box"><p>Cross-functional team<br>participation</p></a>
-     </div>
-      </div>
-</div>
+        <!-- Our Technology -->
+        <div class="sub-section-tech">
+          <div class="section-header-container" data-aos="zoom-in" onclick="toggleSubSection(this)">
+            <h1 class="section-header-text">Our Technology</h1>
+            <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
+          </div>
+          <p>Our <b>Products</b> are developed using...</p>
+          <div class="tech-sub-section">
+            <div class="hardware-focus">
+              <img src="" alt="Hardware Image"> <!-- Add hardware image source -->
+              <ul>
+                <!-- Add hardware bullet points -->
+              </ul>
+            </div>
+            <div class="software-focus">
+              <img src="" alt="Software Image"> <!-- Add software image source -->
+              <ul>
+                <!-- Add software bullet points -->
+              </ul>
+            </div>
+          </div>
+        </div>
       
 <!-- Our Programs -->
 <div class="sub-section-programs">
@@ -516,18 +520,5 @@ for (let location of locations) {
         .openPopup();
 }
 
-// Recenter map
-document.getElementById("recenterMap").addEventListener("click", function() {
-    map.setView([39.8283, -98.5795], 4);
-});
-
-//multi-boxes 
-$(document).ready(function(){
-           $(".box-container").hide();
-           $(".box-link").click(function(e){
-               e.preventDefault();
-               $(".box-container").slideToggle();
-           });
-       });
  </script>
 </html>
