@@ -699,7 +699,8 @@ img {
 
 .timeline-container {
   position: relative;
-  max-width: 1200px;
+  max-height: 1200px;
+  max-width: 300px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -768,20 +769,6 @@ img {
     background-color: #555;
     top: 0;
     left: 0;
-}
-
-.timeline-block:hover {
-  transform: scale(1.05);  /* Increase size by 5% when hovered */
-  width: 75%;
-  transition: transform .2s; /* Add a transition effect */
-  z-index: 2; /* To avoid other elements from overlapping */
-}
-
-.timeline-block:hover {
-  transform: scale(1.05);  /* Increase size by 5% when hovered */
-  width: 75%;
-  transition: transform .2s; /* Add a transition effect */
-  z-index: 2; /* To avoid other elements from overlapping */
 }
 
 * Styles for the last block */

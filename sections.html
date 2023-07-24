@@ -409,6 +409,7 @@
      <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
    </div>
    <div class="timeline-container" data-aos="fade-up">
+      <div class="timeline-header-text"> Yoooo</div>
      <div class="timeline-block" data-aos="zoom-in-down">
        <div class="timeline-date">
          <p>2021</p>
@@ -419,6 +420,26 @@
          <p>Event description...</p>
        </div>
      </div>
+     <div class="timeline-block" data-aos="zoom-in-down">
+      <div class="timeline-date">
+        <p>2022</p>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-content" data-aos="fade-right">
+        <h3>Event Title</h3>
+        <p>Event description...</p>
+      </div>
+    </div>
+    <div class="timeline-block" data-aos="zoom-in-down">
+      <div class="timeline-date">
+        <p>2022</p>
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-content" data-aos="fade-right">
+        <h3>Event Title</h3>
+        <p>Event description...</p>
+      </div>
+    </div>
      <div class="timeline-block" data-aos="zoom-in-down">
        <div class="timeline-date">
          <p>2022</p>
@@ -441,6 +462,59 @@
       </div>
     </div>
    </div>
+   <div class="timeline-container" data-aos="fade-up">
+      <div class="timeline-block" data-aos="zoom-in-down">
+        <div class="timeline-date">
+          <p>2021</p>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content" data-aos="fade-right">
+          <h3>Event Title</h3>
+          <p>Event description...</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-aos="zoom-in-down">
+        <div class="timeline-date">
+          <p>2022</p>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content" data-aos="fade-right">
+          <h3>Event Title</h3>
+          <p>Event description...</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-aos="zoom-in-down">
+         <div class="timeline-date">
+           <p>2022</p>
+           <div class="timeline-dot"></div>
+         </div>
+         <div class="timeline-content" data-aos="fade-right">
+           <h3>Event Title</h3>
+           <p>Event description...</p>
+         </div>
+       </div>
+       <div class="timeline-block" data-aos="zoom-in-down">
+         <div class="timeline-date">
+           <p>2022</p>
+           <div class="timeline-dot"></div>
+         </div>
+         <div class="timeline-content" data-aos="fade-right">
+           <h3>Event Title</h3>
+           <p>Event description...</p>
+         </div>
+       </div>
+      <!-- More timeline blocks as needed... -->
+      <div class="timeline-block last-block" data-aos="zoom-in-down">
+       <div class="timeline-date">
+         <p>2023</p>
+         <div class="timeline-dot"></div>
+       </div>
+       <div class="timeline-content" data-aos="fade-right">
+         <h3>To Be Continued...</h3>
+         <p>Your story starts here!</p>
+       </div>
+     </div>
+    </div>
  </div>
       </section>
    </body>
@@ -462,6 +536,10 @@
           });
        }
     }
+
+    $('.timeline-container').scroll(function() {
+  AOS.refresh();
+});
  
     // Attach event listener to all section-header-containers
     const sectionHeaderContainers = document.querySelectorAll(".section-header-text");
@@ -490,6 +568,32 @@
        });
     });
 
+    // Attach event listener to all timeline-header-containers
+    const timelineContainers = document.querySelectorAll(".timeline-header-text");
+    sectionHeaderContainers.forEach((container) => {
+       container.addEventListener("click", function (event) {
+          const sectionHeader = event.target;
+          const collapsibleContent = sectionHeader.nextElementSibling;
+          collapsibleContent.classList.toggle("timeline-collapsed");
+ 
+          // Collapse all child elements until the next sub-section
+          let nextElement = collapsibleContent.nextElementSibling;
+          while (nextElement && !nextElement.classList.contains("timeline-header-text")) {
+             nextElement.classList.toggle("timeline-collapsed");
+             nextElement = nextElement.nextElementSibling;
+          }
+ 
+          // Reinitialize or refresh AOS for the expanded or collapsed content
+          if (collapsibleContent.classList.contains("timeline-collapsed")) {
+             AOS.refresh();
+          } else {
+             AOS.init({
+                once: true,
+                duration: 1000,
+             });
+          }
+       });
+    });
 
     //Map Stuff
 
