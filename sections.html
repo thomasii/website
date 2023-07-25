@@ -409,113 +409,52 @@
      <div class="forward-mark"><img src="./css/ForwardMarkWhite.png" alt="Forward Mark"></div>
    </div>
    <div class="timeline-container" data-aos="fade-up">
-      <div class="timeline-header-text"> Yoooo</div>
-     <div class="timeline-block" data-aos="zoom-in-down">
-       <div class="timeline-date">
-         <p>2021</p>
-         <div class="timeline-dot"></div>
-       </div>
-       <div class="timeline-content" data-aos="fade-right">
-         <h3>Event Title</h3>
-         <p>Event description...</p>
-       </div>
-     </div>
-     <div class="timeline-block" data-aos="zoom-in-down">
-      <div class="timeline-date">
-        <p>2022</p>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-content" data-aos="fade-right">
-        <h3>Event Title</h3>
-        <p>Event description...</p>
-      </div>
-    </div>
-    <div class="timeline-block" data-aos="zoom-in-down">
-      <div class="timeline-date">
-        <p>2022</p>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-content" data-aos="fade-right">
-        <h3>Event Title</h3>
-        <p>Event description...</p>
-      </div>
-    </div>
-     <div class="timeline-block" data-aos="zoom-in-down">
-       <div class="timeline-date">
-         <p>2022</p>
-         <div class="timeline-dot"></div>
-       </div>
-       <div class="timeline-content" data-aos="fade-right">
-         <h3>Event Title</h3>
-         <p>Event description...</p>
-       </div>
-     </div>
-     <!-- More timeline blocks as needed... -->
-     <div class="timeline-block last-block" data-aos="zoom-in-down">
-      <div class="timeline-date">
-        <p>2023</p>
-        <div class="timeline-dot"></div>
-      </div>
-      <div class="timeline-content" data-aos="fade-right">
-        <h3>To Be Continued...</h3>
-        <p>Your story starts here!</p>
-      </div>
-    </div>
-   </div>
-   <div class="timeline-container" data-aos="fade-up">
-      <div class="timeline-block" data-aos="zoom-in-down">
-        <div class="timeline-date">
-          <p>2021</p>
-          <div class="timeline-dot"></div>
-        </div>
-        <div class="timeline-content" data-aos="fade-right">
-          <h3>Event Title</h3>
-          <p>Event description...</p>
-        </div>
-      </div>
-      <div class="timeline-block" data-aos="zoom-in-down">
-        <div class="timeline-date">
-          <p>2022</p>
-          <div class="timeline-dot"></div>
-        </div>
-        <div class="timeline-content" data-aos="fade-right">
-          <h3>Event Title</h3>
-          <p>Event description...</p>
-        </div>
-      </div>
+      <div class="timeline-header-text">Yoooo</div>
+       
       <div class="timeline-block" data-aos="zoom-in-down">
          <div class="timeline-date">
            <p>2022</p>
            <div class="timeline-dot"></div>
          </div>
-         <div class="timeline-content" data-aos="fade-right">
-           <h3>Event Title</h3>
-           <p>Event description...</p>
-         </div>
+         <a href="#" class="timeline-block-link">
+           <div class="timeline-content" data-aos="fade-right">
+             <h3>Event Title</h3>
+             <p>Event description...</p>
+             <input type="checkbox" id="task1" name="taskStatus" class="task-check">
+             <label for="task1">Mark this task as done</label>
+           </div>
+         </a>
        </div>
        <div class="timeline-block" data-aos="zoom-in-down">
          <div class="timeline-date">
            <p>2022</p>
            <div class="timeline-dot"></div>
          </div>
-         <div class="timeline-content" data-aos="fade-right">
-           <h3>Event Title</h3>
-           <p>Event description...</p>
+         <a href="#" class="timeline-block-link">
+           <div class="timeline-content" data-aos="fade-right">
+             <h3>Event Title</h3>
+             <p>Event description...</p>
+             <input type="checkbox" id="task2" name="taskStatus" class="task-check">
+             <label for="task2">Mark this task as done</label>
+           </div>
+         </a>
+       </div>
+       <div class="timeline-block" data-aos="zoom-in-down">
+         <div class="timeline-date">
+           <p>2022</p>
+           <div class="timeline-dot"></div>
          </div>
+         <a href="#" class="timeline-block-link">
+           <div class="timeline-content" data-aos="fade-right">
+             <h3>Event Title</h3>
+             <p>Event description...</p>
+             <input type="checkbox" id="task3" name="taskStatus" class="task-check">
+             <label for="task3">Mark this task as done</label>
+           </div>
+         </a>
        </div>
-      <!-- More timeline blocks as needed... -->
-      <div class="timeline-block last-block" data-aos="zoom-in-down">
-       <div class="timeline-date">
-         <p>2023</p>
-         <div class="timeline-dot"></div>
-       </div>
-       <div class="timeline-content" data-aos="fade-right">
-         <h3>To Be Continued...</h3>
-         <p>Your story starts here!</p>
-       </div>
-     </div>
-    </div>
- </div>
+
+   </div>
       </section>
    </body>
    <script>
@@ -626,13 +565,19 @@ document.getElementById("recenterMap").addEventListener("click", function() {
     map.setView([39.8283, -98.5795], 4);
 });
 
-//multi-boxes 
-$(document).ready(function(){
-           $(".box-container").hide();
-           $(".box-link").click(function(e){
-               e.preventDefault();
-               $(".box-container").slideToggle();
-           });
-       });
+document.querySelectorAll(".task-check").forEach(function(checkbox) {
+  // When a checkbox is clicked...
+  checkbox.addEventListener("change", function() {
+    // ...store its status in localStorage
+    localStorage.setItem(this.id, this.checked);
+  });
+
+  // On page load, set the checkbox to its stored status
+  if(localStorage.getItem(checkbox.id) === "true") {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+});
  </script>
 </html>
