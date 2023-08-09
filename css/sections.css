@@ -42,7 +42,6 @@ section {
   color: #ffffff;
   margin: 0;
   text-align: center;
-  text-shadow: 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #030303; /* Glowing effect */
 }
 
 .section1 {
@@ -688,6 +687,35 @@ img {
 }
 
 /* TIMELINE */
+/* Display Two Timelines Side-by-Side */
+.timeline-wrapper {
+  width: 33%;
+  float: left;
+}
+
+/* Font & Size Adjustments */
+.timeline-date p, .timeline-content h3, .timeline-content p, label {
+  font-size: 14px; /* Adjust font size */
+}
+
+.timeline-block {
+  margin: 10px 0;
+}
+
+/* Hover Effects */
+
+
+/* Accessibility */
+.task-check:focus + label {
+  outline: 2px solid #4a90e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    width: 100%;
+  }
+}
 
 .grid-container {
   display: grid;
@@ -698,19 +726,15 @@ img {
 
 .timeline-container {
   position: relative;
-  max-height: 1200px;
   max-width: 300px;
+  max-height: 1200px;
+  height: 400px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 6px;
   background-color: #f0f0f0;
-
-  /* New Properties */
-  height: 400px; /* adjust this value according to your needs */
-  overflow-y: auto; /* This will make the content inside timeline-container scrollable */
-
-  /* Custom Scrollbar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #888 #f0f0f0;
 }
@@ -732,14 +756,24 @@ img {
 .timeline-block {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
   position: relative;
+  margin: 20px 0;
+}
+
+.timeline-block:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% + 20px);
+  background-color: #555;
+  top: 0;
+  left: 0;
 }
 
 .timeline-date {
   width: 30%;
   text-align: left;
-  padding-left: 15px;  /* Increased left padding for better alignment */
+  padding-left: 15px;
 }
 
 .timeline-dot {
@@ -754,66 +788,35 @@ img {
   z-index: 1;
 }
 
-.timeline-block:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  background-color: #555;
-  top: 0;
-  left: 0;
-}
-
 .timeline-content {
-  width: 70%;
-  text-align: right;
+  width: 150px;
+  text-align: left;
   padding: 20px;
   border-radius: 6px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #36d1dc, #5b86e5); /* Linear Gradient for modern look */
-  color: #ffffff; /* Text color changed to white */
+  background: linear-gradient(to right, #4a90e2, #242424);
+  color: #ffffff;
 }
 
 .timeline-block:nth-child(even) .timeline-content {
-  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+  background: linear-gradient(to right, #4a90e2, #8e8e8e);
 }
-
-.timeline-block:before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: calc(100% + 20px); /* Extend the height of the line */
-    background-color: #555;
-    top: 0;
-    left: 0;
-}
-.timeline-content {
-  /* ... previous styles ... */
-  background: linear-gradient(to right, #4a90e2, #242424); /* Blue to Grey Gradient */
-  color: #ffffff; /* Text color changed to white */
-}
-
-.timeline-block:nth-child(even) .timeline-content {
-  background: linear-gradient(to right, #4a90e2, #8e8e8e); /* Blue to Light Grey Gradient */
-}
-
-/* New Styles */
 
 .timeline-block-link {
-  text-decoration: none; /* Remove underline from link */
-  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  color: inherit;
 }
 
 .timeline-block-link:hover .timeline-content {
-  background: linear-gradient(to right, #242424, #4a90e2); /* Grey to Blue Gradient reversed */
+  background: linear-gradient(to right, #242424, #4a90e2);
 }
 
 .timeline-block:nth-child(even) .timeline-block-link:hover .timeline-content {
-  background: linear-gradient(to right, #8e8e8e, #4a90e2); /* Light Grey to Blue Gradient reversed */
+  background: linear-gradient(to right, #8e8e8e, #4a90e2);
 }
-/* Styles for the last block */
+
 .last-block:before {
-    height: 100%; /* Reset the line height for the last block */
+  height: 100%;
 }
 
 
